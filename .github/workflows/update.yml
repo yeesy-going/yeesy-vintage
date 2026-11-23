@@ -7,6 +7,8 @@ on:
 
 permissions:
   contents: write
+  pages: write
+  id-token: write
 
 concurrency:
   group: update-chart
@@ -15,6 +17,8 @@ concurrency:
 jobs:
   update:
     runs-on: ubuntu-latest
+    outputs:
+      changed: ${{ steps.commit.outputs.changed }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -29,12 +33,21 @@ jobs:
       - name: Rebuild the chart
         run: npm run build
       - name: Commit if anything changed
+        id: commit
         run: |
           git add data web/data
           if git diff --cached --quiet; then
             echo "No score changes."
+            echo "changed=false" >> "$GITHUB_OUTPUT"
           else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
             git -c user.name="github-actions[bot]" -c user.email="41898282+github-actions[bot]@users.noreply.github.com" \
               commit -m "Update vintage chart data"
             git push
           fi
+
+  # A push made by a workflow does not start other workflows, so deploy from here.
+  deploy:
+    needs: update
+    if: needs.update.outputs.changed == 'true'
+    uses: ./.github/workflows/deploy.yml

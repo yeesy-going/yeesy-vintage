@@ -137,3 +137,15 @@ test('a region only one critic covers is ranked on that critic\'s scores', () =>
   assert.equal(s.years[2002].rank, 1);
   assert.equal(s.years[2002].score, 95);
 });
+
+test('search ignores accents, case, punctuation and Korean spelling variants', async () => {
+  const { normalize } = await import('../web/app.js');
+  assert.equal(normalize('Médoc'), normalize('MEDOC'));
+  assert.equal(normalize('Saint-Émilion'), normalize('st emilion'));
+  assert.equal(normalize('St.-Estèphe'), normalize('Saint Estephe'));
+  assert.equal(normalize('뽀이약'), normalize('포이약'));
+  assert.equal(normalize('까베르네 소비뇽'), normalize('카베르네소비뇽'));
+  assert.equal(normalize('샤또'), normalize('샤토'));
+  assert.equal(normalize('소비뇽'), normalize('쇼비뇽'));
+  assert.notEqual(normalize('메독'), normalize('마고'));
+});

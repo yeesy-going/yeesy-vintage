@@ -23,9 +23,11 @@ export function buildChart(config, raw, meta = {}, changes = []) {
     throw new Error(`Source series not found (site changed its labels?):\n  ${missing.join('\n  ')}`);
   }
 
-  const endYear = Math.max(
+  const latest = Math.max(
     ...regionSeries.flatMap((byCritic) => Object.values(byCritic).flatMap((s) => Object.keys(s).map(Number))),
   );
+  // Newer vintages are rated by too few critics at first; `endYear` holds them back.
+  const endYear = Math.min(latest, config.endYear ?? latest);
   const years = [];
   for (let y = endYear; y >= config.startYear; y--) years.push(y);
 

@@ -28,7 +28,10 @@ jobs:
       - run: npm ci
       - run: npx playwright install --with-deps chromium
       - run: npm test
+      # One critic's site refusing us should not hold back the other two.
       - name: Collect the three charts
+        id: collect
+        continue-on-error: true
         run: npm run collect
       - name: Rebuild the chart
         run: npm run build
@@ -45,9 +48,14 @@ jobs:
               commit -m "Update vintage chart data"
             git push
           fi
+      - name: Fail if a collector failed
+        if: steps.collect.outcome == 'failure'
+        run: |
+          echo "At least one critic's chart could not be collected; see the Collect step."
+          exit 1
 
   # A push made by a workflow does not start other workflows, so deploy from here.
   deploy:
     needs: update
-    if: needs.update.outputs.changed == 'true'
+    if: always() && needs.update.outputs.changed == 'true'
     uses: ./.github/workflows/deploy.yml

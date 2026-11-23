@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="claude:viewport-fit-sides" content="cover">
+<title>Yeesy's Vintage Chart</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@400;500;600&family=IBM+Plex+Sans+KR:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="page">
+  <header class="masthead">
+    <h1>Yeesy's Vintage Chart</h1>
+    <p class="lede">세 평론지의 빈티지 차트를 같은 눈금으로 맞춘 뒤 평균한 산지별 빈티지 점수입니다.</p>
+    <p class="sources" id="sources"></p>
+  </header>
+
+  <section class="controls" aria-label="표시 설정">
+    <div class="segmented" role="group" aria-label="칸에 표시할 값">
+      <button type="button" id="mode-score" class="seg" aria-pressed="true">점수</button>
+      <button type="button" id="mode-rank" class="seg" aria-pressed="false">순위</button>
+    </div>
+    <div class="legend" id="legend" aria-label="범례"></div>
+  </section>
+
+  <section aria-label="산지별 빈티지 점수">
+    <div class="scroller" id="scroller">
+      <table class="chart" id="chart"></table>
+    </div>
+    <p class="hint">칸에 마우스를 올리면 평론가별 점수가 보입니다. 산지 이름을 누르면 아래에 상세가 열립니다.</p>
+  </section>
+
+  <section class="detail" id="detail" aria-live="polite"></section>
+
+  <section class="revisions" id="revisions" hidden>
+    <h2>평론지가 고친 점수</h2>
+    <p class="note">평론지는 이미 발표한 빈티지 점수를 나중에 고치기도 합니다. 수집할 때마다 달라진 값을 기록합니다.</p>
+    <div class="scroller"><table class="plain" id="revisions-table"></table></div>
+  </section>
+
+  <section class="method">
+    <h2>점수 계산 방법</h2>
+    <ol>
+      <li><strong>수집</strong> Wine Enthusiast, Wine Advocate, Wine Spectator의 공개 빈티지 차트 점수를 가져옵니다. 평론지가 산지를 더 잘게 나눠 놓았으면 하위 산지 점수를 평균해 상위 산지 점수로 씁니다.</li>
+      <li><strong>눈금 맞추기</strong> 평론지마다 점수가 후한 정도와 점수 폭이 다릅니다. 산지별로 각 평론지의 평균과 표준편차를 세 평론지 전체의 평균과 표준편차에 맞춥니다.</li>
+      <li><strong>평균</strong> 해당 연도를 평가한 평론지의 보정 점수를 평균합니다.</li>
+      <li><strong>순위</strong> 그 산지를 다루는 평론지가 모두 평가한 해와 한 곳만 빠진 해를 순위에 넣습니다. 한 곳만 평가한 해는 점수만 보여주고 순위에서는 뺍니다.</li>
+    </ol>
+  </section>
+</div>
+<div class="tooltip" id="tooltip" role="tooltip" hidden></div>
+<script type="module" src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,135 @@
+{
+  "startYear": 1997,
+  "critics": {
+    "WE": { "name": "Wine Enthusiast", "url": "https://www.wineenthusiast.com/wine-vintage-chart/" },
+    "WA": { "name": "Wine Advocate", "url": "https://www.robertparker.com/vintage-chart" },
+    "WS": { "name": "Wine Spectator", "url": "https://www.winespectator.com/vintage-charts" }
+  },
+  "regions": [
+    {
+      "id": "bordeaux-left-bank", "country": "France", "name": "Bordeaux Left Bank",
+      "sources": {
+        "WE": ["France|Bordeaux|Médoc", "France|Bordeaux|Graves (red)"],
+        "WA": ["France|Bordeaux: St. Julien / Pauillac / St. Estephe", "France|Bordeaux: Margaux", "France|Bordeaux: Graves / Pessac Leognan"],
+        "WS": ["bordeaux-left-bank-reds-medoc-pessac-leognan"]
+      }
+    },
+    {
+      "id": "bordeaux-right-bank", "country": "France", "name": "Bordeaux Right Bank",
+      "sources": {
+        "WE": ["France|Bordeaux|Pomerol/Saint-Émilion"],
+        "WA": ["France|Bordeaux: Pomerol", "France|Bordeaux: St. Emilion"],
+        "WS": ["bordeaux-right-bank-reds-pomerol-st-emilion"]
+      }
+    },
+    {
+      "id": "cote-de-nuits", "country": "France", "name": "Côte de Nuits Reds",
+      "sources": {
+        "WE": ["France|Burgundy|Côte de Nuits (red)"],
+        "WA": ["France|Burgundy: Cote de Nuits (red)"],
+        "WS": ["burgundy-cotes-de-nuits-reds"]
+      }
+    },
+    {
+      "id": "cote-de-beaune", "country": "France", "name": "Côte de Beaune Reds",
+      "sources": {
+        "WE": ["France|Burgundy|Côte de Beaune (red)"],
+        "WA": ["France|Burgundy: Cote de Beaune (red)"],
+        "WS": ["burgundy-cotes-de-beaune-reds"]
+      }
+    },
+    {
+      "id": "northern-rhone", "country": "France", "name": "Northern Rhône Reds",
+      "sources": {
+        "WE": ["France|Nothern Rhône|Reds"],
+        "WA": ["France|Northern Rhône: Cote Rotie / Hermitage"],
+        "WS": ["rhone-northern"]
+      }
+    },
+    {
+      "id": "southern-rhone", "country": "France", "name": "Southern Rhône Reds",
+      "sources": {
+        "WE": ["France|Southern Rhône|Reds"],
+        "WA": ["France|Southern Rhône: Chateauneuf du Pape"],
+        "WS": ["rhone-southern"]
+      }
+    },
+    {
+      "id": "champagne", "country": "France", "name": "Champagne",
+      "sources": {
+        "WE": ["France|Champagne|"],
+        "WA": ["France|Champagne"],
+        "WS": ["champagne"]
+      }
+    },
+    {
+      "id": "sauternes", "country": "France", "name": "Sauternes",
+      "sources": {
+        "WE": ["France|Bordeaux|Sauternes/Barsac"],
+        "WA": ["France|Bordeaux: Barsac / Sauternes"],
+        "WS": ["bordeaux-sauternes"]
+      }
+    },
+    {
+      "id": "barolo", "country": "Italy", "name": "Barolo",
+      "sources": {
+        "WE": ["Italy|Piedmont|Barolo"],
+        "WA": ["Italy|Piedmont: Barolo"],
+        "WS": ["piedmont"]
+      },
+      "notes": { "WS": "Piedmont 전체(Barolo·Barbaresco) 차트 기준" }
+    },
+    {
+      "id": "bolgheri", "country": "Italy", "name": "Bolgheri",
+      "sources": {
+        "WE": ["Italy|Tuscany|Bolgheri"],
+        "WA": ["Italy|Tuscany: Bolgheri Superiore"],
+        "WS": ["tuscany-bolgheri-maremma"]
+      },
+      "notes": { "WS": "Bolgheri·Maremma 차트 기준" }
+    },
+    {
+      "id": "brunello", "country": "Italy", "name": "Brunello di Montalcino",
+      "sources": {
+        "WE": ["Italy|Tuscany|Brunello di Montalcino"],
+        "WA": ["Italy|Tuscany: Brunello di Montalcino"],
+        "WS": ["tuscany-brunello-di-montalcino"]
+      }
+    },
+    {
+      "id": "chianti-classico", "country": "Italy", "name": "Chianti Classico",
+      "sources": {
+        "WE": ["Italy|Tuscany|Chianti Classico"],
+        "WA": ["Italy|Tuscany: Chianti Classico"],
+        "WS": ["tuscany-chianti-and-chianti-classico"]
+      },
+      "notes": { "WS": "Chianti·Chianti Classico 차트 기준" }
+    },
+    {
+      "id": "amarone", "country": "Italy", "name": "Amarone",
+      "sources": {
+        "WE": ["Italy|Veneto|Amarone"],
+        "WA": ["Italy|Veneto: Amarone della Valpolicella"]
+      },
+      "notes": { "WS": "Wine Spectator는 Amarone 차트가 없음" }
+    },
+    {
+      "id": "napa-valley", "country": "US", "name": "Napa Valley",
+      "sources": {
+        "WE": ["USA|Napa|Cabernet Sauvignon"],
+        "WA": ["USA|California - North Coast: Cabernet Sauvignon"],
+        "WS": ["california-cabernet-napa"]
+      },
+      "notes": { "WA": "North Coast Cabernet Sauvignon 차트 기준" }
+    },
+    {
+      "id": "willamette-valley", "country": "US", "name": "Willamette Valley",
+      "sources": {
+        "WE": ["USA|Willamette Valley|Pinot Noir"],
+        "WA": ["USA|Oregon - Willamette Valley: Pinot Noir and Chardonnay"],
+        "WS": ["oregon"]
+      },
+      "notes": { "WA": "Pinot Noir·Chardonnay 통합 차트 기준", "WS": "Oregon 차트 기준" }
+    }
+  ]
+}

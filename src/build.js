@@ -31,7 +31,7 @@ export function buildChart(config, raw, meta = {}, changes = []) {
 
   const round = (v, d = 2) => (v == null ? null : Number(v.toFixed(d)));
   const regions = config.regions.map((region, i) => {
-    const scored = scoreRegion(regionSeries[i], years);
+    const scored = scoreRegion(regionSeries[i], years, config.scoring);
     return {
       id: region.id,
       country: region.country,

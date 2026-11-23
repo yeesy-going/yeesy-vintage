@@ -2,16 +2,19 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 import { parseScore } from '../src/parse.js';
-import { combineSeries, scoreRegion } from '../src/score.js';
+import { clipExtremes, combineSeries, scoreRegion } from '../src/score.js';
 
 const sheet = JSON.parse(
   await readFile(new URL('./fixtures/original-sheet.json', import.meta.url), 'utf8'),
 );
 
+// The spreadsheet had neither guard, so compare against it with both turned off.
+const PLAIN = { outlierSd: null, maxScore: null };
+
 test('reproduces every score in the original spreadsheet', () => {
   let checked = 0;
   for (const region of sheet.regions) {
-    const scored = scoreRegion(region.raw, sheet.years);
+    const scored = scoreRegion(region.raw, sheet.years, PLAIN);
     for (const [year, expected] of Object.entries(region.sheetScore)) {
       const got = scored.years[year].score;
       assert.ok(Math.abs(got - expected) < 1e-6, `${region.name} ${year}: ${got} vs sheet ${expected}`);
@@ -26,7 +29,7 @@ test('ranks match the spreadsheet when every year has all of the region\'s criti
   // is left out, the two must agree exactly.
   let compared = 0;
   for (const region of sheet.regions) {
-    const scored = scoreRegion(region.raw, sheet.years);
+    const scored = scoreRegion(region.raw, sheet.years, PLAIN);
     const all = Object.values(scored.years);
     if (all.some((y) => y.status === 'provisional' || y.status === 'none')) continue;
     for (const [year, expected] of Object.entries(region.sheetRank)) {
@@ -44,7 +47,7 @@ test('a year rated by a single critic is shown but not ranked', () => {
   assert.equal(amarone.sheetRank['1997'], 1);
   assert.equal(scored.years[1997].status, 'provisional');
   assert.equal(scored.years[1997].rank, null);
-  assert.ok(scored.years[1997].score > 96);
+  assert.ok(scored.years[1997].score > 95);
   assert.ok(!scored.top.includes(1997));
   // Only two critics cover Amarone, so two critics is full coverage there.
   assert.equal(scored.years[2010].status, 'full');
@@ -90,4 +93,47 @@ test('score cells', () => {
   assert.equal(parseScore('90-92R'), 91);
   assert.equal(parseScore('100T'), 100);
   for (const blank of ['NT', 'NV', 'NR', '', null, undefined, '2021']) assert.equal(parseScore(blank), null);
+});
+
+test('one disastrous year no longer squeezes the critic\'s other years', () => {
+  const rhone = sheet.regions.find((r) => r.name === 'Southern Rhône Reds');
+  assert.equal(rhone.raw.WA['2002'], 58);
+  const plain = scoreRegion(rhone.raw, sheet.years, PLAIN);
+  const guarded = scoreRegion(rhone.raw, sheet.years);
+  // Wine Advocate's spread was inflated by its 58 for 2002; with the guard it is closer
+  // to the other critics', so their scores are stretched less to match it.
+  assert.ok(guarded.critics.WA.sd < plain.critics.WA.sd - 1);
+  assert.equal(guarded.critics.WA.clipped, 1);
+  const stretch = (s) => s.pooled.sd / s.critics.WE.sd;
+  assert.ok(stretch(plain) > 1.5 && stretch(guarded) < 1.3, `${stretch(plain)} -> ${stretch(guarded)}`);
+  // The disastrous year is still scored from its real value and stays last.
+  assert.equal(guarded.years[2002].raw.WA, 58);
+  assert.equal(guarded.top.at(-1), 2002);
+});
+
+test('adjusted scores never exceed 100', () => {
+  const rhone = sheet.regions.find((r) => r.name === 'Southern Rhône Reds');
+  const plain = scoreRegion(rhone.raw, sheet.years, PLAIN);
+  assert.ok(plain.years[2016].adjusted.WE > 100);
+  for (const region of sheet.regions) {
+    const scored = scoreRegion(region.raw, sheet.years);
+    for (const y of Object.values(scored.years)) {
+      for (const a of Object.values(y.adjusted)) assert.ok(a <= 100);
+    }
+  }
+});
+
+test('only genuinely extreme values are pulled in', () => {
+  assert.deepEqual(clipExtremes([90, 92, 94, 96, 91, 93], 3), [90, 92, 94, 96, 91, 93]);
+  const clipped = clipExtremes([90, 92, 94, 96, 91, 93, 60], 3);
+  assert.deepEqual(clipped.slice(0, 6), [90, 92, 94, 96, 91, 93]);
+  assert.ok(clipped[6] > 60 && clipped[6] < 90);
+  assert.deepEqual(clipExtremes([90, 60], 3), [90, 60]); // too few years to judge
+});
+
+test('a region only one critic covers is ranked on that critic\'s scores', () => {
+  const s = scoreRegion({ WE: { 2001: 90, 2002: 95, 2003: 88 } }, [2003, 2002, 2001]);
+  assert.equal(s.years[2002].status, 'full');
+  assert.equal(s.years[2002].rank, 1);
+  assert.equal(s.years[2002].score, 95);
 });

@@ -1,5 +1,9 @@
 {
   "startYear": 1997,
+  "scoring": {
+    "outlierSd": 3,
+    "maxScore": 100
+  },
   "critics": {
     "WE": {
       "name": "Wine Enthusiast",
@@ -97,6 +101,21 @@
         "WS": [
           "rhone-northern"
         ]
+      }
+    },
+    {
+      "id": "northern-rhone-whites",
+      "country": "France",
+      "name": "Northern Rhône Whites",
+      "sources": {
+        "WE": [
+          "France|Nothern Rhône|Whites"
+        ]
+      },
+      "notes": {
+        "WE": "Condrieu·Hermitage Blanc 등 북부 론 화이트 전체",
+        "WA": "화이트 차트 없음",
+        "WS": "레드·화이트 통합 차트만 있음"
       }
     },
     {
@@ -759,6 +778,20 @@
       },
       "notes": {
         "WA": "New Zealand 전체 차트 기준"
+      }
+    },
+    {
+      "id": "marlborough-sauvignon-blanc",
+      "country": "New Zealand",
+      "name": "Marlborough Sauvignon Blanc",
+      "sources": {
+        "WE": [
+          "New Zealand|Marlborough|Sauvignon Blanc"
+        ]
+      },
+      "notes": {
+        "WA": "품종 구분 없는 New Zealand 차트만 있음",
+        "WS": "New Zealand는 Pinot Noir 차트만 있음"
       }
     },
     {

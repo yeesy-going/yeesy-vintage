@@ -8,11 +8,20 @@
 //
 // The year's score is the mean of the adjusted scores of the critics who rated it.
 //
+// Two guards keep one disastrous year from distorting everything else:
+//   - Extreme scores are pulled in for the statistics only. A score more than `outlierSd`
+//     standard deviations from the mean of that critic's OTHER years counts as that limit
+//     when the means and standard deviations are computed. The year itself is still
+//     scored from its real value, so a terrible vintage stays at the bottom.
+//   - An adjusted score never exceeds `maxScore`.
+//
 // How a year is ranked depends on how many of the region's critics rated it:
 //   full        every critic that covers the region      -> ranked
 //   partial     one critic missing, at least two present -> ranked, flagged
 //   provisional fewer than that (typically one critic)   -> shown, not ranked
 //   none        nobody                                   -> blank
+
+export const DEFAULTS = { outlierSd: 3, maxScore: 100 };
 
 const mean = (xs) => xs.reduce((a, b) => a + b, 0) / xs.length;
 // Population standard deviation, as in the original spreadsheet (STDEV.P).
@@ -20,6 +29,17 @@ const sd = (xs) => {
   const m = mean(xs);
   return Math.sqrt(mean(xs.map((x) => (x - m) ** 2)));
 };
+
+/** Values with extremes pulled in to `k` standard deviations of the other values' mean. */
+export function clipExtremes(values, k) {
+  if (!k || values.length < 5) return values;
+  return values.map((v, i) => {
+    const rest = values.filter((_, j) => j !== i);
+    const m = mean(rest);
+    const s = sd(rest);
+    return s > 0 ? Math.min(m + k * s, Math.max(m - k * s, v)) : v;
+  });
+}
 
 /** Mean of several source series, year by year, over the series that have that year. */
 export function combineSeries(seriesList) {
@@ -34,14 +54,22 @@ export function combineSeries(seriesList) {
 /**
  * @param {Record<string, Record<string, number>>} byCritic  critic -> year -> raw score
  * @param {number[]} years  the window the statistics and ranks are computed over
+ * @param {{outlierSd?: number|null, maxScore?: number|null}} [options]  null turns a guard off
  */
-export function scoreRegion(byCritic, years) {
+export function scoreRegion(byCritic, years, options = {}) {
+  const { outlierSd, maxScore } = { ...DEFAULTS, ...options };
   const critics = {};
   const pooledValues = [];
   for (const [critic, series] of Object.entries(byCritic)) {
-    const values = years.map((y) => series[y]).filter((v) => v != null);
-    if (!values.length) continue;
-    critics[critic] = { n: values.length, mean: mean(values), sd: sd(values) };
+    const real = years.map((y) => series[y]).filter((v) => v != null);
+    if (!real.length) continue;
+    const values = clipExtremes(real, outlierSd);
+    critics[critic] = {
+      n: values.length,
+      mean: mean(values),
+      sd: sd(values),
+      clipped: values.filter((v, i) => v !== real[i]).length,
+    };
     pooledValues.push(...values);
   }
   const covering = Object.keys(critics);
@@ -58,7 +86,8 @@ export function scoreRegion(byCritic, years) {
       const c = critics[critic];
       raw[critic] = v;
       // A critic who gave every year the same score tells us nothing about which is better.
-      adjusted[critic] = c.sd > 0 ? pooled.mean + (v - c.mean) * (pooled.sd / c.sd) : pooled.mean;
+      const a = c.sd > 0 ? pooled.mean + (v - c.mean) * (pooled.sd / c.sd) : pooled.mean;
+      adjusted[critic] = maxScore == null ? a : Math.min(maxScore, a);
     }
     const n = Object.keys(raw).length;
     let status = 'none';

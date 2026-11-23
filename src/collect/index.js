@@ -22,10 +22,12 @@ const MIN_SCORES = { WE: 1500, WA: 1500, WS: 250 };
 
 function diff(critic, before, after, date) {
   const out = [];
-  // A series we were not collecting before is new data, not a change by the critic.
+  // Only series collected both times can show a change by the critic: one we have just
+  // started or stopped collecting is our own doing.
   for (const label of Object.keys(before)) {
+    if (!(label in after)) continue;
     const a = before[label];
-    const b = after[label] ?? {};
+    const b = after[label];
     for (const year of new Set([...Object.keys(a), ...Object.keys(b)])) {
       if (a[year] !== b[year]) {
         out.push({ date, critic, label, year: Number(year), from: a[year] ?? null, to: b[year] ?? null });
@@ -61,7 +63,7 @@ async function main() {
       const rel = `data/raw/${critic.toLowerCase()}.json`;
       const before = await readJson(rel, null);
       const delta = before ? diff(critic, before, series, date) : [];
-      if (!before || delta.length) {
+      if (JSON.stringify(before) !== JSON.stringify(series)) {
         await writeJson(rel, series);
         meta[critic] = { lastChanged: date };
         changes.push(...delta);

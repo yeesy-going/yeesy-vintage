@@ -1,0 +1,2410 @@
+{
+  "startYear": 1997,
+  "endYear": 2024,
+  "scoring": {
+    "outlierSd": 3,
+    "maxScore": 100
+  },
+  "critics": {
+    "WE": {
+      "name": "Wine Enthusiast",
+      "url": "https://www.wineenthusiast.com/wine-vintage-chart/"
+    },
+    "WA": {
+      "name": "Wine Advocate",
+      "url": "https://www.robertparker.com/vintage-chart"
+    },
+    "WS": {
+      "name": "Wine Spectator",
+      "url": "https://www.winespectator.com/vintage-charts"
+    }
+  },
+  "regions": [
+    {
+      "id": "bordeaux-left-bank",
+      "country": "France",
+      "name": "Bordeaux Left Bank",
+      "sources": {
+        "WE": [
+          "France|Bordeaux|Médoc",
+          "France|Bordeaux|Graves (red)"
+        ],
+        "WA": [
+          "France|Bordeaux: St. Julien / Pauillac / St. Estephe",
+          "France|Bordeaux: Margaux",
+          "France|Bordeaux: Graves / Pessac Leognan"
+        ],
+        "WS": [
+          "bordeaux-left-bank-reds-medoc-pessac-leognan"
+        ]
+      },
+      "aliases": [
+        "Bordeaux",
+        "Left Bank",
+        "Médoc",
+        "Haut-Médoc",
+        "Pauillac",
+        "Margaux",
+        "Saint-Julien",
+        "Saint-Estèphe",
+        "Pessac-Léognan",
+        "Graves",
+        "Moulis",
+        "Listrac",
+        "Cabernet Sauvignon",
+        "Claret",
+        "Grand Cru Classé",
+        "1855",
+        "Lafite Rothschild",
+        "Latour",
+        "Mouton Rothschild",
+        "Château Margaux",
+        "Haut-Brion",
+        "La Mission Haut-Brion",
+        "Léoville Las Cases",
+        "Léoville Barton",
+        "Léoville Poyferré",
+        "Ducru-Beaucaillou",
+        "Cos d'Estournel",
+        "Montrose",
+        "Pichon Baron",
+        "Pichon Lalande",
+        "Lynch-Bages",
+        "Pontet-Canet",
+        "Palmer",
+        "Calon-Ségur",
+        "Gruaud Larose",
+        "Talbot",
+        "Beychevelle",
+        "Smith Haut Lafitte",
+        "Pape Clément",
+        "Domaine de Chevalier",
+        "보르도",
+        "좌안",
+        "레프트 뱅크",
+        "메독",
+        "오메독",
+        "포이약",
+        "뽀이악",
+        "마고",
+        "마르고",
+        "생줄리앙",
+        "생쥘리앙",
+        "생테스테프",
+        "페삭 레오냥",
+        "그라브",
+        "물리",
+        "리스트락",
+        "까베르네 소비뇽",
+        "카버네 소비뇽",
+        "그랑 크뤼",
+        "라피트",
+        "라투르",
+        "무통 로칠드",
+        "샤또 마고",
+        "오브리옹",
+        "레오빌 라스 카스",
+        "코스 데스투르넬",
+        "몽로즈",
+        "피숑",
+        "린치 바주",
+        "퐁테 카네",
+        "팔머",
+        "칼롱 세귀르",
+        "딸보"
+      ]
+    },
+    {
+      "id": "bordeaux-right-bank",
+      "country": "France",
+      "name": "Bordeaux Right Bank",
+      "sources": {
+        "WE": [
+          "France|Bordeaux|Pomerol/Saint-Émilion"
+        ],
+        "WA": [
+          "France|Bordeaux: Pomerol",
+          "France|Bordeaux: St. Emilion"
+        ],
+        "WS": [
+          "bordeaux-right-bank-reds-pomerol-st-emilion"
+        ]
+      },
+      "aliases": [
+        "Bordeaux",
+        "Right Bank",
+        "Pomerol",
+        "Saint-Émilion",
+        "Fronsac",
+        "Canon-Fronsac",
+        "Lalande-de-Pomerol",
+        "Montagne-Saint-Émilion",
+        "Castillon",
+        "Merlot",
+        "Cabernet Franc",
+        "Pétrus",
+        "Le Pin",
+        "Lafleur",
+        "Cheval Blanc",
+        "Ausone",
+        "Angélus",
+        "Pavie",
+        "Figeac",
+        "Vieux Château Certan",
+        "L'Évangile",
+        "La Conseillante",
+        "Trotanoy",
+        "Canon",
+        "Troplong Mondot",
+        "Valandraud",
+        "보르도",
+        "우안",
+        "라이트 뱅크",
+        "포므롤",
+        "뽀므롤",
+        "생테밀리옹",
+        "생떼밀리옹",
+        "프롱삭",
+        "메를로",
+        "멜롯",
+        "까베르네 프랑",
+        "페트뤼스",
+        "르 팽",
+        "슈발 블랑",
+        "오존",
+        "앙젤뤼스",
+        "파비",
+        "피작"
+      ]
+    },
+    {
+      "id": "cote-de-nuits",
+      "country": "France",
+      "name": "Côte de Nuits Reds",
+      "sources": {
+        "WE": [
+          "France|Burgundy|Côte de Nuits (red)"
+        ],
+        "WA": [
+          "France|Burgundy: Cote de Nuits (red)"
+        ],
+        "WS": [
+          "burgundy-cotes-de-nuits-reds"
+        ]
+      },
+      "aliases": [
+        "Burgundy",
+        "Bourgogne",
+        "Côte d'Or",
+        "Pinot Noir",
+        "Gevrey-Chambertin",
+        "Chambertin",
+        "Morey-Saint-Denis",
+        "Clos de la Roche",
+        "Clos de Tart",
+        "Chambolle-Musigny",
+        "Musigny",
+        "Bonnes-Mares",
+        "Vougeot",
+        "Clos de Vougeot",
+        "Échézeaux",
+        "Flagey-Échézeaux",
+        "Vosne-Romanée",
+        "Romanée-Conti",
+        "La Tâche",
+        "Richebourg",
+        "Nuits-Saint-Georges",
+        "Marsannay",
+        "Fixin",
+        "DRC",
+        "Domaine de la Romanée-Conti",
+        "Leroy",
+        "Armand Rousseau",
+        "Roumier",
+        "Dujac",
+        "Méo-Camuzet",
+        "부르고뉴",
+        "버건디",
+        "꼬뜨 드 뉘",
+        "코트 드 뉘",
+        "꼬뜨 도르",
+        "피노 누아",
+        "피노 누아르",
+        "쥬브레 샹베르탱",
+        "즈브레 샹베르탱",
+        "샹베르탱",
+        "모레 생 드니",
+        "샹볼 뮈지니",
+        "뮈지니",
+        "부조",
+        "클로 드 부조",
+        "에세조",
+        "본 로마네",
+        "로마네 콩티",
+        "라 타슈",
+        "리쉬부르",
+        "뉘 생 조르주",
+        "마르사네",
+        "픽생",
+        "르루아",
+        "아르망 루소"
+      ]
+    },
+    {
+      "id": "cote-de-beaune",
+      "country": "France",
+      "name": "Côte de Beaune Reds",
+      "sources": {
+        "WE": [
+          "France|Burgundy|Côte de Beaune (red)"
+        ],
+        "WA": [
+          "France|Burgundy: Cote de Beaune (red)"
+        ],
+        "WS": [
+          "burgundy-cotes-de-beaune-reds"
+        ]
+      },
+      "aliases": [
+        "Burgundy",
+        "Bourgogne",
+        "Côte d'Or",
+        "Pinot Noir",
+        "Beaune",
+        "Pommard",
+        "Volnay",
+        "Corton",
+        "Aloxe-Corton",
+        "Savigny-lès-Beaune",
+        "Pernand-Vergelesses",
+        "Chorey-lès-Beaune",
+        "Santenay",
+        "Monthélie",
+        "Auxey-Duresses",
+        "Ladoix",
+        "Maranges",
+        "Hospices de Beaune",
+        "부르고뉴",
+        "버건디",
+        "꼬뜨 드 본",
+        "코트 드 본",
+        "꼬뜨 도르",
+        "피노 누아",
+        "피노 누아르",
+        "본",
+        "포마르",
+        "볼네",
+        "코르통",
+        "알록스 코르통",
+        "사비니 레 본",
+        "상트네",
+        "오스피스 드 본"
+      ]
+    },
+    {
+      "id": "northern-rhone",
+      "country": "France",
+      "name": "Northern Rhône Reds",
+      "sources": {
+        "WE": [
+          "France|Nothern Rhône|Reds"
+        ],
+        "WA": [
+          "France|Northern Rhône: Cote Rotie / Hermitage"
+        ],
+        "WS": [
+          "rhone-northern"
+        ]
+      },
+      "aliases": [
+        "Rhône",
+        "Rhône Valley",
+        "Côte-Rôtie",
+        "Hermitage",
+        "Cornas",
+        "Saint-Joseph",
+        "Crozes-Hermitage",
+        "Syrah",
+        "Guigal",
+        "La Landonne",
+        "La Mouline",
+        "La Turque",
+        "Chave",
+        "Jaboulet",
+        "La Chapelle",
+        "Chapoutier",
+        "Clape",
+        "론",
+        "북부 론",
+        "론 밸리",
+        "꼬뜨 로띠",
+        "코트 로티",
+        "에르미타주",
+        "에르미따쥬",
+        "코르나스",
+        "생 조셉",
+        "생 조제프",
+        "크로즈 에르미타주",
+        "시라",
+        "쉬라",
+        "기갈",
+        "샤브",
+        "자불레",
+        "샤푸티에"
+      ]
+    },
+    {
+      "id": "northern-rhone-whites",
+      "country": "France",
+      "name": "Northern Rhône Whites",
+      "sources": {
+        "WE": [
+          "France|Nothern Rhône|Whites"
+        ]
+      },
+      "aliases": [
+        "Rhône",
+        "Rhône Valley",
+        "Condrieu",
+        "Viognier",
+        "Hermitage Blanc",
+        "Château-Grillet",
+        "Saint-Joseph Blanc",
+        "Crozes-Hermitage Blanc",
+        "Saint-Péray",
+        "Marsanne",
+        "Roussanne",
+        "론",
+        "북부 론",
+        "론 밸리",
+        "꽁드리유",
+        "콩드리외",
+        "비오니에",
+        "에르미타주 블랑",
+        "샤또 그리예",
+        "생 페레",
+        "마르산",
+        "루산",
+        "화이트"
+      ],
+      "notes": {
+        "WA": "화이트 차트 없음",
+        "WS": "레드·화이트 통합 차트만 있음"
+      }
+    },
+    {
+      "id": "southern-rhone",
+      "country": "France",
+      "name": "Southern Rhône Reds",
+      "sources": {
+        "WE": [
+          "France|Southern Rhône|Reds"
+        ],
+        "WA": [
+          "France|Southern Rhône: Chateauneuf du Pape"
+        ],
+        "WS": [
+          "rhone-southern"
+        ]
+      },
+      "aliases": [
+        "Rhône",
+        "Rhône Valley",
+        "Châteauneuf-du-Pape",
+        "CdP",
+        "Gigondas",
+        "Vacqueyras",
+        "Rasteau",
+        "Cairanne",
+        "Lirac",
+        "Côtes du Rhône",
+        "Côtes du Rhône Villages",
+        "Vinsobres",
+        "Beaumes-de-Venise",
+        "Ventoux",
+        "Grenache",
+        "Mourvèdre",
+        "GSM",
+        "Beaucastel",
+        "Rayas",
+        "Vieux Télégraphe",
+        "Clos des Papes",
+        "Pégau",
+        "Janasse",
+        "론",
+        "남부 론",
+        "론 밸리",
+        "샤또뇌프 뒤 파프",
+        "샤토네프 뒤 파프",
+        "샤또네프",
+        "지공다스",
+        "바케라스",
+        "라스토",
+        "케란",
+        "리락",
+        "꼬뜨 뒤 론",
+        "코트 뒤 론",
+        "그르나슈",
+        "무르베드르",
+        "보카스텔",
+        "라야스"
+      ]
+    },
+    {
+      "id": "champagne",
+      "country": "France",
+      "name": "Champagne",
+      "sources": {
+        "WE": [
+          "France|Champagne|"
+        ],
+        "WA": [
+          "France|Champagne"
+        ],
+        "WS": [
+          "champagne"
+        ]
+      },
+      "aliases": [
+        "Sparkling",
+        "Reims",
+        "Épernay",
+        "Montagne de Reims",
+        "Côte des Blancs",
+        "Vallée de la Marne",
+        "Aÿ",
+        "Blanc de Blancs",
+        "Blanc de Noirs",
+        "Brut",
+        "Vintage Champagne",
+        "Millésime",
+        "Dom Pérignon",
+        "Krug",
+        "Cristal",
+        "Louis Roederer",
+        "Bollinger",
+        "Salon",
+        "Taittinger",
+        "Comtes de Champagne",
+        "Pol Roger",
+        "Veuve Clicquot",
+        "Moët & Chandon",
+        "Jacques Selosse",
+        "샴페인",
+        "샹파뉴",
+        "스파클링",
+        "랭스",
+        "에페르네",
+        "블랑 드 블랑",
+        "블랑 드 누아",
+        "브뤼",
+        "빈티지 샴페인",
+        "돔 페리뇽",
+        "크룩",
+        "크뤼그",
+        "크리스탈",
+        "루이 로드레",
+        "볼랭저",
+        "살롱",
+        "떼땅져",
+        "폴 로저",
+        "뵈브 클리코",
+        "모엣 샹동"
+      ]
+    },
+    {
+      "id": "sauternes",
+      "country": "France",
+      "name": "Sauternes",
+      "sources": {
+        "WE": [
+          "France|Bordeaux|Sauternes/Barsac"
+        ],
+        "WA": [
+          "France|Bordeaux: Barsac / Sauternes"
+        ],
+        "WS": [
+          "bordeaux-sauternes"
+        ]
+      },
+      "aliases": [
+        "Bordeaux",
+        "Barsac",
+        "Sémillon",
+        "Sweet",
+        "Dessert wine",
+        "Botrytis",
+        "Noble rot",
+        "Château d'Yquem",
+        "Yquem",
+        "Climens",
+        "Suduiraut",
+        "Rieussec",
+        "Coutet",
+        "Guiraud",
+        "보르도",
+        "소테른",
+        "쏘떼른",
+        "바르삭",
+        "세미용",
+        "스위트",
+        "디저트 와인",
+        "귀부",
+        "귀부 와인",
+        "디켐",
+        "샤또 디켐",
+        "이켐",
+        "화이트"
+      ]
+    },
+    {
+      "id": "burgundy-whites",
+      "country": "France",
+      "name": "Burgundy Whites",
+      "sources": {
+        "WE": [
+          "France|Burgundy|Chablis",
+          "France|Burgundy|Côte de Beaune (white)",
+          "France|Burgundy|Mâconnais"
+        ],
+        "WA": [
+          "France|Burgundy (white)"
+        ],
+        "WS": [
+          "burgundy-white"
+        ]
+      },
+      "aliases": [
+        "Bourgogne",
+        "Burgundy",
+        "White Burgundy",
+        "Bourgogne Blanc",
+        "Chardonnay",
+        "Chablis",
+        "Meursault",
+        "Puligny-Montrachet",
+        "Chassagne-Montrachet",
+        "Montrachet",
+        "Bâtard-Montrachet",
+        "Chevalier-Montrachet",
+        "Corton-Charlemagne",
+        "Saint-Aubin",
+        "Côte de Beaune",
+        "Mâconnais",
+        "Mâcon",
+        "Pouilly-Fuissé",
+        "Saint-Véran",
+        "Viré-Clessé",
+        "Côte Chalonnaise",
+        "Rully",
+        "Montagny",
+        "Aligoté",
+        "Coche-Dury",
+        "Leflaive",
+        "Raveneau",
+        "Dauvissat",
+        "Roulot",
+        "Ramonet",
+        "부르고뉴",
+        "버건디",
+        "부르고뉴 블랑",
+        "화이트 버건디",
+        "샤르도네",
+        "샤도네이",
+        "샤블리",
+        "뫼르소",
+        "퓔리니 몽라셰",
+        "샤사뉴 몽라셰",
+        "몽라셰",
+        "바타르 몽라셰",
+        "코르통 샤를마뉴",
+        "생토뱅",
+        "마코네",
+        "마콩",
+        "푸이 퓌세",
+        "화이트"
+      ]
+    },
+    {
+      "id": "alsace",
+      "country": "France",
+      "name": "Alsace",
+      "sources": {
+        "WE": [
+          "France|Alsace|"
+        ],
+        "WA": [
+          "France|Alsace"
+        ],
+        "WS": [
+          "alsace"
+        ]
+      },
+      "aliases": [
+        "Riesling",
+        "Gewurztraminer",
+        "Pinot Gris",
+        "Muscat",
+        "Pinot Blanc",
+        "Sylvaner",
+        "Crémant d'Alsace",
+        "Vendanges Tardives",
+        "Sélection de Grains Nobles",
+        "Grand Cru",
+        "Trimbach",
+        "Zind-Humbrecht",
+        "Hugel",
+        "Weinbach",
+        "Clos Sainte Hune",
+        "알자스",
+        "리슬링",
+        "게뷔르츠트라미너",
+        "게부르츠트라미너",
+        "피노 그리",
+        "뮈스카",
+        "피노 블랑",
+        "트림바크",
+        "진트 훔브레히트",
+        "휘겔",
+        "화이트"
+      ]
+    },
+    {
+      "id": "loire-whites",
+      "country": "France",
+      "name": "Loire Whites",
+      "sources": {
+        "WE": [
+          "France|Loire|Dry Whites"
+        ],
+        "WA": [
+          "France|Loire Valley (white)"
+        ],
+        "WS": [
+          "loire"
+        ]
+      },
+      "aliases": [
+        "Loire Valley",
+        "Sancerre",
+        "Pouilly-Fumé",
+        "Vouvray",
+        "Montlouis",
+        "Savennières",
+        "Muscadet",
+        "Anjou",
+        "Saumur",
+        "Touraine",
+        "Menetou-Salon",
+        "Quincy",
+        "Chenin Blanc",
+        "Sauvignon Blanc",
+        "Melon de Bourgogne",
+        "Dagueneau",
+        "Huet",
+        "루아르",
+        "르와르",
+        "상세르",
+        "푸이 퓌메",
+        "부브레",
+        "사브니에르",
+        "뮈스카데",
+        "앙주",
+        "소뮈르",
+        "투렌",
+        "슈냉 블랑",
+        "소비뇽 블랑",
+        "쇼비뇽 블랑",
+        "화이트"
+      ],
+      "notes": {
+        "WS": "Loire 전체 차트 기준"
+      }
+    },
+    {
+      "id": "beaujolais",
+      "country": "France",
+      "name": "Beaujolais",
+      "sources": {
+        "WE": [
+          "France|Beaujolais|"
+        ],
+        "WA": [
+          "France|Burgundy: Beaujolais"
+        ]
+      },
+      "aliases": [
+        "Gamay",
+        "Cru Beaujolais",
+        "Beaujolais-Villages",
+        "Beaujolais Nouveau",
+        "Morgon",
+        "Fleurie",
+        "Moulin-à-Vent",
+        "Brouilly",
+        "Côte de Brouilly",
+        "Chénas",
+        "Chiroubles",
+        "Juliénas",
+        "Régnié",
+        "Saint-Amour",
+        "보졸레",
+        "보졸레 누보",
+        "보졸레 빌라주",
+        "가메",
+        "모르공",
+        "플뢰리",
+        "물랭 아 방",
+        "브루이",
+        "쥘리에나"
+      ]
+    },
+    {
+      "id": "languedoc-roussillon",
+      "country": "France",
+      "name": "Languedoc-Roussillon",
+      "sources": {
+        "WE": [
+          "France|Languedoc-Roussillon|"
+        ],
+        "WA": [
+          "France|Languedoc",
+          "France|Roussillon"
+        ]
+      },
+      "aliases": [
+        "Languedoc",
+        "Roussillon",
+        "Midi",
+        "Pic Saint-Loup",
+        "Faugères",
+        "Saint-Chinian",
+        "Minervois",
+        "Corbières",
+        "Terrasses du Larzac",
+        "La Clape",
+        "Fitou",
+        "Côtes du Roussillon",
+        "Collioure",
+        "Banyuls",
+        "Maury",
+        "Limoux",
+        "Carignan",
+        "Grenache",
+        "Syrah",
+        "Mourvèdre",
+        "랑그독",
+        "랑그도크",
+        "루시용",
+        "루씨용",
+        "픽 생 루",
+        "포제르",
+        "미네르부아",
+        "코르비에르",
+        "바뉼스",
+        "모리",
+        "시라",
+        "그르나슈",
+        "무르베드르",
+        "카리냥"
+      ]
+    },
+    {
+      "id": "barolo-barbaresco",
+      "country": "Italy",
+      "name": "Barolo · Barbaresco",
+      "sources": {
+        "WE": [
+          "Italy|Piedmont|Barolo",
+          "Italy|Piedmont|Barbaresco"
+        ],
+        "WA": [
+          "Italy|Piedmont: Barolo",
+          "Italy|Piedmont: Barbaresco"
+        ],
+        "WS": [
+          "piedmont"
+        ]
+      },
+      "aliases": [
+        "Piedmont",
+        "Piemonte",
+        "Langhe",
+        "Nebbiolo",
+        "Alba",
+        "La Morra",
+        "Serralunga d'Alba",
+        "Monforte d'Alba",
+        "Castiglione Falletto",
+        "Neive",
+        "Treiso",
+        "Cannubi",
+        "Roero",
+        "Gaja",
+        "Giacomo Conterno",
+        "Monfortino",
+        "Bruno Giacosa",
+        "Bartolo Mascarello",
+        "Giuseppe Rinaldi",
+        "Vietti",
+        "Produttori del Barbaresco",
+        "피에몬테",
+        "피에몬트",
+        "랑게",
+        "바롤로",
+        "바르바레스코",
+        "네비올로",
+        "알바",
+        "라 모라",
+        "세라룽가",
+        "몬포르테",
+        "가야",
+        "콘테르노",
+        "지아코사",
+        "비에티"
+      ]
+    },
+    {
+      "id": "bolgheri",
+      "country": "Italy",
+      "name": "Bolgheri",
+      "sources": {
+        "WE": [
+          "Italy|Tuscany|Bolgheri"
+        ],
+        "WA": [
+          "Italy|Tuscany: Bolgheri Superiore"
+        ],
+        "WS": [
+          "tuscany-bolgheri-maremma"
+        ]
+      },
+      "aliases": [
+        "Tuscany",
+        "Toscana",
+        "Super Tuscan",
+        "Maremma",
+        "Bolgheri Superiore",
+        "Bolgheri Sassicaia",
+        "Sassicaia",
+        "Ornellaia",
+        "Masseto",
+        "Guado al Tasso",
+        "Tenuta San Guido",
+        "Le Macchiole",
+        "Grattamacco",
+        "Cabernet Sauvignon",
+        "Merlot",
+        "Cabernet Franc",
+        "토스카나",
+        "투스카니",
+        "볼게리",
+        "슈퍼 투스칸",
+        "슈퍼 토스카나",
+        "마렘마",
+        "사시카이아",
+        "싸시까이아",
+        "오르넬라이아",
+        "마세토",
+        "과도 알 타소",
+        "까베르네 소비뇽",
+        "카버네 소비뇽",
+        "까베르네 프랑",
+        "메를로",
+        "멜롯"
+      ],
+      "notes": {
+        "WS": "Bolgheri·Maremma 차트 기준"
+      }
+    },
+    {
+      "id": "brunello",
+      "country": "Italy",
+      "name": "Brunello di Montalcino",
+      "sources": {
+        "WE": [
+          "Italy|Tuscany|Brunello di Montalcino"
+        ],
+        "WA": [
+          "Italy|Tuscany: Brunello di Montalcino"
+        ],
+        "WS": [
+          "tuscany-brunello-di-montalcino"
+        ]
+      },
+      "aliases": [
+        "Tuscany",
+        "Toscana",
+        "Montalcino",
+        "Sangiovese",
+        "Sangiovese Grosso",
+        "Rosso di Montalcino",
+        "Biondi-Santi",
+        "Soldera",
+        "Casanova di Neri",
+        "Il Poggione",
+        "Poggio di Sotto",
+        "Banfi",
+        "Valdicava",
+        "Altesino",
+        "토스카나",
+        "투스카니",
+        "브루넬로",
+        "브루넬로 디 몬탈치노",
+        "몬탈치노",
+        "산지오베제",
+        "산조베제",
+        "비온디 산티",
+        "솔데라",
+        "카사노바 디 네리",
+        "반피"
+      ]
+    },
+    {
+      "id": "chianti-classico",
+      "country": "Italy",
+      "name": "Chianti Classico",
+      "sources": {
+        "WE": [
+          "Italy|Tuscany|Chianti Classico"
+        ],
+        "WA": [
+          "Italy|Tuscany: Chianti Classico"
+        ],
+        "WS": [
+          "tuscany-chianti-and-chianti-classico"
+        ]
+      },
+      "aliases": [
+        "Tuscany",
+        "Toscana",
+        "Chianti",
+        "Sangiovese",
+        "Gran Selezione",
+        "Riserva",
+        "Gallo Nero",
+        "Greve",
+        "Radda",
+        "Gaiole",
+        "Castellina",
+        "Panzano",
+        "Chianti Rufina",
+        "Fontodi",
+        "Felsina",
+        "Isole e Olena",
+        "Castello di Ama",
+        "Antinori",
+        "Tignanello",
+        "토스카나",
+        "투스카니",
+        "끼안티",
+        "키안티",
+        "끼안띠 클라시코",
+        "키안티 클라시코",
+        "산지오베제",
+        "산조베제",
+        "그란 셀레지오네",
+        "리제르바",
+        "폰토디",
+        "펠시나",
+        "안티노리",
+        "티냐넬로"
+      ],
+      "notes": {
+        "WS": "Chianti·Chianti Classico 차트 기준"
+      }
+    },
+    {
+      "id": "amarone",
+      "country": "Italy",
+      "name": "Amarone",
+      "sources": {
+        "WE": [
+          "Italy|Veneto|Amarone"
+        ],
+        "WA": [
+          "Italy|Veneto: Amarone della Valpolicella"
+        ]
+      },
+      "aliases": [
+        "Veneto",
+        "Valpolicella",
+        "Amarone della Valpolicella",
+        "Ripasso",
+        "Recioto",
+        "Corvina",
+        "Rondinella",
+        "Molinara",
+        "Appassimento",
+        "Verona",
+        "Quintarelli",
+        "Dal Forno Romano",
+        "Allegrini",
+        "Masi",
+        "Bertani",
+        "Tommasi",
+        "Zenato",
+        "베네토",
+        "아마로네",
+        "발폴리첼라",
+        "리파소",
+        "레치오토",
+        "코르비나",
+        "아파시멘토",
+        "베로나",
+        "퀸타렐리",
+        "달 포르노",
+        "알레그리니",
+        "마시",
+        "베르타니",
+        "토마시",
+        "제나토"
+      ],
+      "notes": {
+        "WS": "Wine Spectator는 Amarone 차트가 없음"
+      }
+    },
+    {
+      "id": "friuli-whites",
+      "country": "Italy",
+      "name": "Friuli Whites",
+      "sources": {
+        "WE": [
+          "Italy|Collio-Friuli|Whites"
+        ],
+        "WA": [
+          "Italy|Friuli Venezia Giulia: Collio (white)"
+        ]
+      },
+      "aliases": [
+        "Friuli",
+        "Friuli Venezia Giulia",
+        "Collio",
+        "Colli Orientali",
+        "Isonzo",
+        "Friulano",
+        "Ribolla Gialla",
+        "Pinot Grigio",
+        "Sauvignon",
+        "Malvasia",
+        "Jermann",
+        "Gravner",
+        "Livio Felluga",
+        "프리울리",
+        "콜리오",
+        "프리울라노",
+        "리볼라 지알라",
+        "피노 그리지오",
+        "예르만",
+        "그라브너",
+        "화이트"
+      ]
+    },
+    {
+      "id": "alto-adige-whites",
+      "country": "Italy",
+      "name": "Alto Adige Whites",
+      "sources": {
+        "WE": [
+          "Italy|Trentino-Alto Adige|Whites"
+        ],
+        "WA": [
+          "Italy|Trentino-Alto Adige (white)"
+        ]
+      },
+      "aliases": [
+        "Trentino",
+        "Alto Adige",
+        "Südtirol",
+        "South Tyrol",
+        "Pinot Grigio",
+        "Pinot Bianco",
+        "Gewürztraminer",
+        "Sauvignon",
+        "Kerner",
+        "Müller-Thurgau",
+        "Terlano",
+        "Cantina Terlan",
+        "Tramin",
+        "Alois Lageder",
+        "Elena Walch",
+        "알토 아디제",
+        "트렌티노",
+        "쥐트티롤",
+        "남티롤",
+        "피노 그리지오",
+        "피노 비앙코",
+        "게뷔르츠트라미너",
+        "테를라노",
+        "화이트"
+      ]
+    },
+    {
+      "id": "rioja",
+      "country": "Spain",
+      "name": "Rioja",
+      "sources": {
+        "WE": [
+          "Spain|Rioja|Reds"
+        ],
+        "WA": [
+          "Spain|Rioja"
+        ],
+        "WS": [
+          "rioja"
+        ]
+      },
+      "aliases": [
+        "Tempranillo",
+        "Garnacha",
+        "Graciano",
+        "Mazuelo",
+        "Rioja Alta",
+        "Rioja Alavesa",
+        "Rioja Oriental",
+        "Rioja Baja",
+        "Haro",
+        "Crianza",
+        "Reserva",
+        "Gran Reserva",
+        "López de Heredia",
+        "Viña Tondonia",
+        "La Rioja Alta",
+        "CVNE",
+        "Muga",
+        "Marqués de Riscal",
+        "Marqués de Murrieta",
+        "Roda",
+        "Artadi",
+        "Remírez de Ganuza",
+        "리오하",
+        "템프라니요",
+        "뗌쁘라니요",
+        "가르나차",
+        "리오하 알타",
+        "리오하 알라베사",
+        "크리안자",
+        "레세르바",
+        "그란 레세르바",
+        "로페즈 데 에레디아",
+        "비냐 톤도니아",
+        "무가",
+        "마르케스 데 리스칼",
+        "마르케스 데 무리에타"
+      ]
+    },
+    {
+      "id": "ribera-del-duero",
+      "country": "Spain",
+      "name": "Ribera del Duero",
+      "sources": {
+        "WE": [
+          "Spain|Ribera del Duero|Reds"
+        ],
+        "WA": [
+          "Spain|Castilla León: Ribera Del Duero"
+        ],
+        "WS": [
+          "ribera-del-duero"
+        ]
+      },
+      "aliases": [
+        "Tempranillo",
+        "Tinto Fino",
+        "Tinta del País",
+        "Castilla y León",
+        "Duero",
+        "Vega Sicilia",
+        "Único",
+        "Pingus",
+        "Pesquera",
+        "Alión",
+        "Aalto",
+        "Emilio Moro",
+        "Hacienda Monasterio",
+        "Dominio de Atauta",
+        "리베라 델 두에로",
+        "템프라니요",
+        "뗌쁘라니요",
+        "틴토 피노",
+        "카스티야 이 레온",
+        "베가 시실리아",
+        "우니코",
+        "핑구스",
+        "페스케라",
+        "알리온",
+        "알토",
+        "에밀리오 모로"
+      ]
+    },
+    {
+      "id": "priorat",
+      "country": "Spain",
+      "name": "Priorat",
+      "sources": {
+        "WE": [
+          "Spain|Catalonia|Reds"
+        ],
+        "WA": [
+          "Spain|Catalonia: Priorat"
+        ],
+        "WS": [
+          "priorat"
+        ]
+      },
+      "aliases": [
+        "Catalonia",
+        "Catalunya",
+        "Cataluña",
+        "Priorato",
+        "Garnacha",
+        "Garnatxa",
+        "Cariñena",
+        "Carignan",
+        "Samsó",
+        "Llicorella",
+        "Gratallops",
+        "Montsant",
+        "Álvaro Palacios",
+        "L'Ermita",
+        "Clos Mogador",
+        "Clos Erasmus",
+        "Mas Doix",
+        "Scala Dei",
+        "프리오랏",
+        "프리오라트",
+        "카탈루냐",
+        "까탈루냐",
+        "가르나차",
+        "카리녜나",
+        "알바로 팔라시오스",
+        "레르미타",
+        "클로스 모가도르",
+        "카리냥"
+      ],
+      "notes": {
+        "WE": "Catalonia Reds 차트 기준"
+      }
+    },
+    {
+      "id": "galicia-whites",
+      "country": "Spain",
+      "name": "Galicia Whites",
+      "sources": {
+        "WE": [
+          "Spain|Galicia|Whites"
+        ],
+        "WA": [
+          "Spain|Galicia"
+        ]
+      },
+      "aliases": [
+        "Galicia",
+        "Albariño",
+        "Rías Baixas",
+        "Godello",
+        "Valdeorras",
+        "Ribeiro",
+        "Ribeira Sacra",
+        "Treixadura",
+        "Monterrei",
+        "Pazo de Señorans",
+        "Do Ferreiro",
+        "Rafael Palacios",
+        "갈리시아",
+        "알바리뇨",
+        "알바리뉴",
+        "리아스 바이사스",
+        "고데요",
+        "발데오라스",
+        "리베이로",
+        "화이트"
+      ]
+    },
+    {
+      "id": "douro-reds",
+      "country": "Portugal",
+      "name": "Douro Reds",
+      "sources": {
+        "WE": [
+          "Portugal|Table Wines|Reds"
+        ],
+        "WA": [
+          "Portugal|Portugal dry wines"
+        ],
+        "WS": [
+          "douro-valley-reds"
+        ]
+      },
+      "aliases": [
+        "Portugal",
+        "Douro",
+        "Douro Valley",
+        "Touriga Nacional",
+        "Touriga Franca",
+        "Tinta Roriz",
+        "Cima Corgo",
+        "Quinta do Crasto",
+        "Quinta do Vale Meão",
+        "Niepoort",
+        "Barca Velha",
+        "Quinta do Vallado",
+        "Dão",
+        "Alentejo",
+        "Bairrada",
+        "포르투갈",
+        "도우루",
+        "도루",
+        "두오로",
+        "투리가 나시오날",
+        "니에푸르트",
+        "바르카 벨라",
+        "다웅",
+        "알렌테주"
+      ],
+      "notes": {
+        "WE": "Portugal 레드 전체 차트 기준",
+        "WA": "Portugal 드라이 와인 전체 차트 기준"
+      }
+    },
+    {
+      "id": "germany-riesling",
+      "country": "Germany",
+      "name": "Germany Riesling",
+      "sources": {
+        "WE": [
+          "Germany|Mosel|Whites",
+          "Germany|Rhine Regions|Whites"
+        ],
+        "WA": [
+          "Germany|Mosel and Nahe (white)",
+          "Germany|Rhein-Main-Neckar (white)"
+        ],
+        "WS": [
+          "germany"
+        ]
+      },
+      "aliases": [
+        "Germany",
+        "Riesling",
+        "Mosel",
+        "Saar",
+        "Ruwer",
+        "Rheingau",
+        "Nahe",
+        "Pfalz",
+        "Rheinhessen",
+        "Kabinett",
+        "Spätlese",
+        "Auslese",
+        "Beerenauslese",
+        "Trockenbeerenauslese",
+        "TBA",
+        "Eiswein",
+        "Grosses Gewächs",
+        "GG",
+        "Trocken",
+        "Egon Müller",
+        "JJ Prüm",
+        "Joh. Jos. Prüm",
+        "Dönnhoff",
+        "Keller",
+        "Robert Weil",
+        "Dr. Loosen",
+        "Fritz Haag",
+        "Scharzhofberger",
+        "Wehlener Sonnenuhr",
+        "독일",
+        "리슬링",
+        "모젤",
+        "자르",
+        "라인가우",
+        "나헤",
+        "팔츠",
+        "라인헤센",
+        "카비넷",
+        "슈페트레제",
+        "아우스레제",
+        "베렌아우스레제",
+        "트로켄베렌아우스레제",
+        "아이스바인",
+        "그로세스 게벡스",
+        "트로켄",
+        "에곤 뮐러",
+        "프륌",
+        "된호프",
+        "켈러",
+        "로버트 바일",
+        "닥터 루젠",
+        "화이트"
+      ]
+    },
+    {
+      "id": "austria-whites",
+      "country": "Austria",
+      "name": "Austria Whites",
+      "sources": {
+        "WE": [
+          "Austria|Danube Regions|Whites"
+        ],
+        "WA": [
+          "Austria|Niederösterreich / Wien / Burgenland (white)"
+        ],
+        "WS": [
+          "austria"
+        ]
+      },
+      "aliases": [
+        "Austria",
+        "Wachau",
+        "Kamptal",
+        "Kremstal",
+        "Traisental",
+        "Wagram",
+        "Weinviertel",
+        "Niederösterreich",
+        "Wien",
+        "Vienna",
+        "Danube",
+        "Grüner Veltliner",
+        "Riesling",
+        "Smaragd",
+        "Federspiel",
+        "Steinfeder",
+        "F.X. Pichler",
+        "Knoll",
+        "Hirtzberger",
+        "Prager",
+        "Bründlmayer",
+        "Nikolaihof",
+        "오스트리아",
+        "바하우",
+        "캄프탈",
+        "크렘스탈",
+        "니더외스터라이히",
+        "빈",
+        "비엔나",
+        "다뉴브",
+        "그뤼너 벨트리너",
+        "그뤼너 펠트리너",
+        "리슬링",
+        "스마라그트",
+        "화이트"
+      ]
+    },
+    {
+      "id": "austria-reds",
+      "country": "Austria",
+      "name": "Austria Reds",
+      "sources": {
+        "WE": [
+          "Austria|Burgenland|Reds"
+        ],
+        "WA": [
+          "Austria|Niederösterreich / Wien / Burgenland (red)"
+        ]
+      },
+      "aliases": [
+        "Austria",
+        "Burgenland",
+        "Mittelburgenland",
+        "Neusiedlersee",
+        "Leithaberg",
+        "Carnuntum",
+        "Blaufränkisch",
+        "Zweigelt",
+        "St. Laurent",
+        "Moric",
+        "Umathum",
+        "오스트리아",
+        "부르겐란트",
+        "블라우프랭키쉬",
+        "츠바이겔트",
+        "상크트 라우렌트"
+      ]
+    },
+    {
+      "id": "napa-valley",
+      "country": "US",
+      "name": "Napa Valley",
+      "sources": {
+        "WE": [
+          "USA|Napa|Cabernet Sauvignon"
+        ],
+        "WA": [
+          "USA|California - North Coast: Cabernet Sauvignon"
+        ],
+        "WS": [
+          "california-cabernet-napa"
+        ]
+      },
+      "aliases": [
+        "California",
+        "Napa",
+        "North Coast",
+        "Cabernet Sauvignon",
+        "Cabernet Franc",
+        "Bordeaux blend",
+        "Oakville",
+        "Rutherford",
+        "Stags Leap District",
+        "Howell Mountain",
+        "St. Helena",
+        "Calistoga",
+        "Yountville",
+        "Mount Veeder",
+        "Spring Mountain",
+        "Diamond Mountain",
+        "Atlas Peak",
+        "Coombsville",
+        "Pritchard Hill",
+        "To Kalon",
+        "Opus One",
+        "Screaming Eagle",
+        "Harlan Estate",
+        "Dominus",
+        "Caymus",
+        "Stag's Leap Wine Cellars",
+        "Shafer",
+        "Hillside Select",
+        "Joseph Phelps",
+        "Insignia",
+        "Robert Mondavi",
+        "Heitz",
+        "Dunn",
+        "Colgin",
+        "Bryant",
+        "Scarecrow",
+        "Quintessa",
+        "Silver Oak",
+        "Far Niente",
+        "Chateau Montelena",
+        "Spottswoode",
+        "Corison",
+        "캘리포니아",
+        "나파",
+        "나파 밸리",
+        "까베르네 소비뇽",
+        "카버네 소비뇽",
+        "오크빌",
+        "러더포드",
+        "스택스 립",
+        "하웰 마운틴",
+        "세인트 헬레나",
+        "칼리스토가",
+        "욘트빌",
+        "마운트 비더",
+        "오퍼스 원",
+        "스크리밍 이글",
+        "할란",
+        "도미누스",
+        "케이머스",
+        "쉐이퍼",
+        "조셉 펠프스",
+        "인시그니아",
+        "로버트 몬다비",
+        "하이츠",
+        "실버 오크",
+        "파 니엔테",
+        "샤또 몬텔레나",
+        "까베르네 프랑"
+      ],
+      "notes": {
+        "WA": "North Coast Cabernet Sauvignon 차트 기준"
+      }
+    },
+    {
+      "id": "willamette-valley",
+      "country": "US",
+      "name": "Willamette Valley",
+      "sources": {
+        "WE": [
+          "USA|Willamette Valley|Pinot Noir"
+        ],
+        "WA": [
+          "USA|Oregon - Willamette Valley: Pinot Noir and Chardonnay"
+        ],
+        "WS": [
+          "oregon"
+        ]
+      },
+      "aliases": [
+        "Oregon",
+        "Willamette",
+        "Pinot Noir",
+        "Chardonnay",
+        "Dundee Hills",
+        "Eola-Amity Hills",
+        "Yamhill-Carlton",
+        "Chehalem Mountains",
+        "Ribbon Ridge",
+        "McMinnville",
+        "Domaine Drouhin",
+        "Domaine Serene",
+        "Beaux Frères",
+        "Cristom",
+        "Bergström",
+        "Eyrie",
+        "오리건",
+        "오레곤",
+        "윌라멧",
+        "윌러밋",
+        "윌라메트 밸리",
+        "피노 누아",
+        "피노 누아르",
+        "던디 힐스",
+        "도멘 드루앵",
+        "도멘 서린",
+        "보 프레르",
+        "샤르도네",
+        "샤도네이"
+      ],
+      "notes": {
+        "WA": "Pinot Noir·Chardonnay 통합 차트 기준",
+        "WS": "Oregon 차트 기준"
+      }
+    },
+    {
+      "id": "california-pinot-noir",
+      "country": "US",
+      "name": "California Pinot Noir",
+      "sources": {
+        "WE": [
+          "USA|Sonoma|Pinot Noir",
+          "USA|Russian River Valley|Pinot Noir",
+          "USA|Carneros|Pinot Noir",
+          "USA|Central Coast|Pinot Noir",
+          "USA|Santa Barbara|Pinot Noir"
+        ],
+        "WA": [
+          "USA|California - North Coast: Pinot Noir"
+        ],
+        "WS": [
+          "california-pinot-noir"
+        ]
+      },
+      "aliases": [
+        "California",
+        "Pinot Noir",
+        "Sonoma",
+        "Sonoma Coast",
+        "Russian River Valley",
+        "Carneros",
+        "Anderson Valley",
+        "Santa Lucia Highlands",
+        "Santa Barbara",
+        "Sta. Rita Hills",
+        "Santa Maria Valley",
+        "Central Coast",
+        "Monterey",
+        "Kosta Browne",
+        "Williams Selyem",
+        "Rochioli",
+        "Kistler",
+        "Littorai",
+        "Sea Smoke",
+        "Aubert",
+        "Marcassin",
+        "Hirsch",
+        "Flowers",
+        "캘리포니아",
+        "피노 누아",
+        "피노 누아르",
+        "소노마",
+        "소노마 코스트",
+        "러시안 리버 밸리",
+        "카네로스",
+        "앤더슨 밸리",
+        "산타 루시아 하이랜즈",
+        "산타 바바라",
+        "센트럴 코스트",
+        "코스타 브라운",
+        "윌리엄스 셀리엄",
+        "키슬러"
+      ],
+      "notes": {
+        "WA": "North Coast Pinot Noir 차트 기준"
+      }
+    },
+    {
+      "id": "california-chardonnay",
+      "country": "US",
+      "name": "California Chardonnay",
+      "sources": {
+        "WE": [
+          "USA|Napa|Chardonnay",
+          "USA|Carneros|Chardonnay",
+          "USA|Russian River Valley|Chardonnay",
+          "USA|Central Coast|Chardonnay",
+          "USA|Santa Barbara|Chardonnay"
+        ],
+        "WA": [
+          "USA|California - North Coast: Chardonnay"
+        ],
+        "WS": [
+          "california-chardonnay"
+        ]
+      },
+      "aliases": [
+        "California",
+        "Chardonnay",
+        "Napa",
+        "Sonoma",
+        "Sonoma Coast",
+        "Carneros",
+        "Russian River Valley",
+        "Santa Barbara",
+        "Central Coast",
+        "Santa Cruz Mountains",
+        "Kistler",
+        "Aubert",
+        "Peter Michael",
+        "Kongsgaard",
+        "Ramey",
+        "Rombauer",
+        "Far Niente",
+        "Chateau Montelena",
+        "Mount Eden",
+        "Marcassin",
+        "캘리포니아",
+        "샤르도네",
+        "샤도네이",
+        "나파",
+        "소노마",
+        "카네로스",
+        "러시안 리버 밸리",
+        "키슬러",
+        "오베르",
+        "롬바우어",
+        "화이트"
+      ],
+      "notes": {
+        "WA": "North Coast Chardonnay 차트 기준"
+      }
+    },
+    {
+      "id": "california-zinfandel",
+      "country": "US",
+      "name": "California Zinfandel",
+      "sources": {
+        "WE": [
+          "USA|Napa|Zinfandel",
+          "USA|Sonoma|Zinfandel",
+          "USA|Sierra Foothills|Zinfandel"
+        ],
+        "WA": [
+          "USA|California - North Coast: Zinfandel"
+        ],
+        "WS": [
+          "california-zinfandel"
+        ]
+      },
+      "aliases": [
+        "California",
+        "Zinfandel",
+        "Zin",
+        "Old Vine",
+        "Sonoma",
+        "Dry Creek Valley",
+        "Russian River Valley",
+        "Napa",
+        "Sierra Foothills",
+        "Amador",
+        "Lodi",
+        "Paso Robles",
+        "Ridge",
+        "Geyserville",
+        "Lytton Springs",
+        "Turley",
+        "Seghesio",
+        "Ravenswood",
+        "Bedrock",
+        "캘리포니아",
+        "진판델",
+        "올드 바인",
+        "소노마",
+        "드라이 크릭",
+        "시에라 풋힐스",
+        "로다이",
+        "릿지",
+        "털리",
+        "세게지오"
+      ],
+      "notes": {
+        "WA": "North Coast Zinfandel 차트 기준"
+      }
+    },
+    {
+      "id": "california-rhone-reds",
+      "country": "US",
+      "name": "California Rhône-style Reds",
+      "sources": {
+        "WE": [
+          "USA|Central Coast|Syrah",
+          "USA|North Coast|Syrah",
+          "USA|South Coast|Syrah"
+        ],
+        "WS": [
+          "california-rhone-style-reds"
+        ]
+      },
+      "aliases": [
+        "California",
+        "Syrah",
+        "Shiraz",
+        "Grenache",
+        "Mourvèdre",
+        "GSM",
+        "Rhône Rangers",
+        "Central Coast",
+        "North Coast",
+        "South Coast",
+        "Paso Robles",
+        "Santa Barbara",
+        "Ballard Canyon",
+        "Sine Qua Non",
+        "Saxum",
+        "Alban",
+        "Tablas Creek",
+        "Qupé",
+        "캘리포니아",
+        "시라",
+        "쉬라",
+        "그르나슈",
+        "무르베드르",
+        "론 레인저",
+        "센트럴 코스트",
+        "사인 콰 논",
+        "색섬",
+        "타블라스 크릭",
+        "쉬라즈"
+      ],
+      "notes": {
+        "WE": "Syrah 차트 기준"
+      }
+    },
+    {
+      "id": "paso-robles",
+      "country": "US",
+      "name": "Paso Robles",
+      "sources": {
+        "WE": [
+          "USA|Paso Robles|Reds"
+        ],
+        "WA": [
+          "USA|California - Central Coast: Paso Robles"
+        ]
+      },
+      "aliases": [
+        "California",
+        "Central Coast",
+        "San Luis Obispo",
+        "Adelaida",
+        "Willow Creek",
+        "Templeton Gap",
+        "Zinfandel",
+        "Cabernet Sauvignon",
+        "Syrah",
+        "Rhône blend",
+        "Saxum",
+        "Tablas Creek",
+        "Justin",
+        "Daou",
+        "L'Aventure",
+        "Booker",
+        "Epoch",
+        "Austin Hope",
+        "캘리포니아",
+        "센트럴 코스트",
+        "파소 로블스",
+        "파소 로블레스",
+        "색섬",
+        "타블라스 크릭",
+        "저스틴",
+        "다우",
+        "까베르네 소비뇽",
+        "카버네 소비뇽",
+        "시라",
+        "진판델"
+      ]
+    },
+    {
+      "id": "santa-barbara",
+      "country": "US",
+      "name": "Santa Barbara",
+      "sources": {
+        "WE": [
+          "USA|Santa Barbara|Chardonnay",
+          "USA|Santa Barbara|Pinot Noir"
+        ],
+        "WA": [
+          "USA|California - Central Coast: Santa Barbara"
+        ]
+      },
+      "aliases": [
+        "California",
+        "Central Coast",
+        "Santa Barbara County",
+        "Sta. Rita Hills",
+        "Santa Rita Hills",
+        "Santa Maria Valley",
+        "Santa Ynez Valley",
+        "Ballard Canyon",
+        "Happy Canyon",
+        "Los Olivos",
+        "Pinot Noir",
+        "Chardonnay",
+        "Syrah",
+        "Au Bon Climat",
+        "Sea Smoke",
+        "Sanford",
+        "Brewer-Clifton",
+        "Melville",
+        "Domaine de la Côte",
+        "Sandhi",
+        "캘리포니아",
+        "센트럴 코스트",
+        "산타 바바라",
+        "산타 리타 힐스",
+        "산타 마리아 밸리",
+        "산타 이네즈",
+        "오 봉 클리마",
+        "씨 스모크",
+        "시라",
+        "샤르도네",
+        "샤도네이",
+        "피노 누아",
+        "피노 누아르"
+      ]
+    },
+    {
+      "id": "washington",
+      "country": "US",
+      "name": "Washington Reds",
+      "sources": {
+        "WE": [
+          "USA|Columbia Valley|Cabernet, Merlot",
+          "USA|Columbia Valley|Syrah"
+        ],
+        "WA": [
+          "USA|Washington: Cabernet Sauvignon and Syrah"
+        ],
+        "WS": [
+          "washington"
+        ]
+      },
+      "aliases": [
+        "Washington State",
+        "Columbia Valley",
+        "Walla Walla",
+        "Red Mountain",
+        "Yakima Valley",
+        "Horse Heaven Hills",
+        "Wahluke Slope",
+        "Cabernet Sauvignon",
+        "Merlot",
+        "Syrah",
+        "Quilceda Creek",
+        "Leonetti",
+        "Cayuse",
+        "Andrew Will",
+        "DeLille",
+        "Chateau Ste. Michelle",
+        "Col Solare",
+        "K Vintners",
+        "Charles Smith",
+        "L'Ecole No 41",
+        "Woodward Canyon",
+        "워싱턴",
+        "워싱턴 주",
+        "콜럼비아 밸리",
+        "컬럼비아 밸리",
+        "왈라 왈라",
+        "레드 마운틴",
+        "야키마 밸리",
+        "퀼세다 크릭",
+        "레오네티",
+        "카유스",
+        "샤또 생 미셸",
+        "까베르네 소비뇽",
+        "카버네 소비뇽",
+        "메를로",
+        "멜롯",
+        "시라"
+      ]
+    },
+    {
+      "id": "mendoza",
+      "country": "Argentina",
+      "name": "Mendoza Reds",
+      "sources": {
+        "WE": [
+          "Argentina|Argentina/Mendoza|Reds"
+        ],
+        "WA": [
+          "Argentina|Argentina"
+        ],
+        "WS": [
+          "argentina"
+        ]
+      },
+      "aliases": [
+        "Argentina",
+        "Mendoza",
+        "Malbec",
+        "Uco Valley",
+        "Valle de Uco",
+        "Luján de Cuyo",
+        "Maipú",
+        "Tupungato",
+        "Gualtallary",
+        "Altamira",
+        "Agrelo",
+        "Cabernet Sauvignon",
+        "Bonarda",
+        "Catena Zapata",
+        "Achaval-Ferrer",
+        "Zuccardi",
+        "Cheval des Andes",
+        "Clos de los Siete",
+        "Trapiche",
+        "Norton",
+        "Salentein",
+        "Viña Cobos",
+        "Terrazas de los Andes",
+        "아르헨티나",
+        "멘도사",
+        "멘도자",
+        "말벡",
+        "우코 밸리",
+        "루한 데 쿠요",
+        "투풍가토",
+        "까테나 자파타",
+        "카테나",
+        "아차발 페레르",
+        "주카르디",
+        "슈발 데 안데스",
+        "트라피체",
+        "까베르네 소비뇽",
+        "카버네 소비뇽"
+      ],
+      "notes": {
+        "WA": "Argentina 전체 차트 기준"
+      }
+    },
+    {
+      "id": "chile-reds",
+      "country": "Chile",
+      "name": "Chile Reds",
+      "sources": {
+        "WE": [
+          "Chile|Maipo|Reds",
+          "Chile|Colchagua|Reds"
+        ],
+        "WA": [
+          "Chile|Chile"
+        ],
+        "WS": [
+          "chile"
+        ]
+      },
+      "aliases": [
+        "Chile",
+        "Maipo",
+        "Maipo Valley",
+        "Alto Maipo",
+        "Puente Alto",
+        "Colchagua",
+        "Apalta",
+        "Rapel",
+        "Cachapoal",
+        "Aconcagua",
+        "Curicó",
+        "Maule",
+        "Central Valley",
+        "Cabernet Sauvignon",
+        "Carmenère",
+        "Syrah",
+        "Almaviva",
+        "Don Melchor",
+        "Seña",
+        "Viñedo Chadwick",
+        "Clos Apalta",
+        "Montes",
+        "Montes Alpha",
+        "Concha y Toro",
+        "Santa Rita",
+        "Errázuriz",
+        "Lapostolle",
+        "Casa Real",
+        "칠레",
+        "마이포",
+        "마이포 밸리",
+        "콜차과",
+        "꼴차구아",
+        "아팔타",
+        "라펠",
+        "카차포알",
+        "아콩카과",
+        "마울레",
+        "센트럴 밸리",
+        "까베르네 소비뇽",
+        "카버네 소비뇽",
+        "까르메네르",
+        "카르메네르",
+        "알마비바",
+        "돈 멜초",
+        "세냐",
+        "채드윅",
+        "클로 아팔타",
+        "몬테스",
+        "몬테스 알파",
+        "콘차 이 토로",
+        "에라주리즈",
+        "라포스톨",
+        "시라"
+      ]
+    },
+    {
+      "id": "barossa-mclaren-vale",
+      "country": "Australia",
+      "name": "Barossa · McLaren Vale Shiraz",
+      "sources": {
+        "WE": [
+          "Australia|Barossa/McLaren Vale|Shiraz"
+        ],
+        "WA": [
+          "Australia|South Australia: Barossa / McLaren Vale"
+        ],
+        "WS": [
+          "barossa-and-mclaren-vale"
+        ]
+      },
+      "aliases": [
+        "Australia",
+        "South Australia",
+        "Barossa",
+        "Barossa Valley",
+        "Eden Valley",
+        "McLaren Vale",
+        "Shiraz",
+        "Syrah",
+        "Grenache",
+        "GSM",
+        "Old Vine",
+        "Penfolds",
+        "Grange",
+        "Henschke",
+        "Hill of Grace",
+        "Torbreck",
+        "Two Hands",
+        "d'Arenberg",
+        "Clarendon Hills",
+        "Yalumba",
+        "Peter Lehmann",
+        "St Hallett",
+        "Rockford",
+        "Mollydooker",
+        "Elderton",
+        "호주",
+        "오스트레일리아",
+        "남호주",
+        "사우스 오스트레일리아",
+        "바로사",
+        "바로사 밸리",
+        "바로싸",
+        "에덴 밸리",
+        "맥라렌 베일",
+        "쉬라즈",
+        "시라즈",
+        "펜폴즈",
+        "그랜지",
+        "헨쉬키",
+        "힐 오브 그레이스",
+        "토브렉",
+        "투 핸즈",
+        "다렌버그",
+        "얄룸바",
+        "몰리두커",
+        "시라",
+        "그르나슈"
+      ]
+    },
+    {
+      "id": "western-australia",
+      "country": "Australia",
+      "name": "Western Australia",
+      "sources": {
+        "WE": [
+          "Australia|Western Australia|Cabernet/Chardonnay"
+        ],
+        "WA": [
+          "Australia|Western Australia"
+        ]
+      },
+      "aliases": [
+        "Australia",
+        "Margaret River",
+        "Great Southern",
+        "Frankland River",
+        "Mount Barker",
+        "Pemberton",
+        "Swan Valley",
+        "Cabernet Sauvignon",
+        "Chardonnay",
+        "Leeuwin Estate",
+        "Art Series",
+        "Cullen",
+        "Moss Wood",
+        "Vasse Felix",
+        "Cape Mentelle",
+        "Voyager Estate",
+        "Xanadu",
+        "Pierro",
+        "호주",
+        "오스트레일리아",
+        "서호주",
+        "웨스턴 오스트레일리아",
+        "마가렛 리버",
+        "마거릿 리버",
+        "그레이트 서던",
+        "르윈 에스테이트",
+        "컬렌",
+        "모스 우드",
+        "바스 펠릭스",
+        "케이프 멘텔",
+        "까베르네 소비뇽",
+        "카버네 소비뇽",
+        "샤르도네",
+        "샤도네이"
+      ]
+    },
+    {
+      "id": "new-zealand-pinot-noir",
+      "country": "New Zealand",
+      "name": "New Zealand Pinot Noir",
+      "sources": {
+        "WE": [
+          "New Zealand|Central Otago|Pinot Noir",
+          "New Zealand|Martinborough|Pinot Noir"
+        ],
+        "WA": [
+          "New Zealand|New Zealand"
+        ],
+        "WS": [
+          "new-zealand"
+        ]
+      },
+      "aliases": [
+        "New Zealand",
+        "NZ",
+        "Central Otago",
+        "Martinborough",
+        "Wairarapa",
+        "Marlborough",
+        "Waipara",
+        "North Canterbury",
+        "Nelson",
+        "Bannockburn",
+        "Gibbston",
+        "Felton Road",
+        "Ata Rangi",
+        "Rippon",
+        "Mt Difficulty",
+        "Craggy Range",
+        "Cloudy Bay",
+        "Dry River",
+        "Burn Cottage",
+        "Bell Hill",
+        "뉴질랜드",
+        "센트럴 오타고",
+        "마틴버러",
+        "마틴보로",
+        "와이라라파",
+        "말보로",
+        "와이파라",
+        "넬슨",
+        "펠튼 로드",
+        "아타 랑기",
+        "크래기 레인지",
+        "클라우디 베이",
+        "피노 누아",
+        "피노 누아르"
+      ],
+      "notes": {
+        "WA": "New Zealand 전체 차트 기준"
+      }
+    },
+    {
+      "id": "south-africa",
+      "country": "South Africa",
+      "name": "South Africa Reds",
+      "sources": {
+        "WE": [
+          "South Africa|South Africa|Reds"
+        ],
+        "WA": [
+          "South Africa|South Africa"
+        ],
+        "WS": [
+          "south-africa"
+        ]
+      },
+      "aliases": [
+        "South Africa",
+        "Stellenbosch",
+        "Swartland",
+        "Paarl",
+        "Franschhoek",
+        "Constantia",
+        "Walker Bay",
+        "Hemel-en-Aarde",
+        "Elgin",
+        "Western Cape",
+        "Cape",
+        "Pinotage",
+        "Cabernet Sauvignon",
+        "Syrah",
+        "Shiraz",
+        "Cape Blend",
+        "Kanonkop",
+        "Meerlust",
+        "Rubicon",
+        "Rust en Vrede",
+        "Sadie Family",
+        "Columella",
+        "Mullineux",
+        "Boekenhoutskloof",
+        "Vergelegen",
+        "Thelema",
+        "De Toren",
+        "Hamilton Russell",
+        "남아공",
+        "남아프리카",
+        "남아프리카공화국",
+        "스텔렌보스",
+        "스와트랜드",
+        "팔",
+        "프랑슈후크",
+        "콘스탄시아",
+        "워커 베이",
+        "웨스턴 케이프",
+        "피노타지",
+        "삐노따쥬",
+        "카논콥",
+        "미어러스트",
+        "루비콘",
+        "러스트 엔 브레데",
+        "새디 패밀리",
+        "까베르네 소비뇽",
+        "카버네 소비뇽",
+        "시라",
+        "쉬라즈"
+      ],
+      "notes": {
+        "WA": "South Africa 전체 차트 기준",
+        "WS": "South Africa 전체 차트 기준"
+      }
+    }
+  ]
+}

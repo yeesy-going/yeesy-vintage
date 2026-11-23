@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="claude:viewport-fit-sides" content="cover">
+<title>Yeesy's Vintage Chart</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@400;500;600&family=IBM+Plex+Sans+KR:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="page">
+  <h1>Yeesy's Vintage Chart</h1>
+
+  <div class="search">
+    <label class="visually-hidden" for="search">산지 검색</label>
+    <input type="search" id="search" placeholder="산지, 마을, 품종, 생산자로 검색 (예: medoc, 피노 누아)" autocomplete="off" spellcheck="false">
+    <span class="search-count" id="search-count" aria-live="polite"></span>
+  </div>
+
+  <div class="scroller">
+    <table class="sheet" id="sheet"></table>
+  </div>
+  <p class="hint">윗줄은 점수, 아랫줄은 그 산지 안에서의 순위입니다. 흐린 점수는 평론지 한 곳만 평가해 순위에서 뺀 해입니다.</p>
+</div>
+<script type="module" src="app.js"></script>
+</body>
+</html>

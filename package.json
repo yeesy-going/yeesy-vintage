@@ -1,0 +1,21 @@
+{
+  "name": "yeesy-vintage",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Yeesy's Vintage Chart: three critics' vintage charts, normalized and combined",
+  "scripts": {
+    "collect": "node src/collect/index.js",
+    "build": "node src/build.js",
+    "update": "npm run collect && npm run build",
+    "test": "node --test",
+    "serve": "node src/serve.js"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "dependencies": {
+    "cheerio": "^1.0.0",
+    "playwright": "1.63.0"
+  }
+}

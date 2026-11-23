@@ -76,6 +76,8 @@ function renderChart() {
       );
     }
     const top = region.top.map(yy).join(' ');
+    const criticCount = Object.keys(region.critics).length;
+    const few = criticCount < Object.keys(chart.critics).length ? `평론지 ${criticCount}곳 · ` : '';
     const row = el(
       'tr',
       { class: region.id === state.regionId ? 'selected' : '', 'data-region': region.id },
@@ -86,7 +88,7 @@ function renderChart() {
           'button',
           { type: 'button', class: 'region-btn', onclick: () => select(region.id, null, true) },
           el('span', { class: 'region-name', text: region.name }),
-          el('small', { text: top }),
+          el('small', { text: few + top }),
         ),
       ),
     );

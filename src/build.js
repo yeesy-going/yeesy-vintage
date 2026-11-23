@@ -63,9 +63,13 @@ export function buildChart(config, raw, meta = {}, changes = []) {
     };
   });
 
-  // Only revisions to series the chart actually uses, newest first.
+  // Scores a critic changed after publishing them (a newly rated vintage is not a revision),
+  // for the series the chart uses, newest first.
   const used = new Set(config.regions.flatMap((r) => Object.entries(r.sources).flatMap(([c, ls]) => ls.map((l) => `${c}|${l}`))));
-  const revisions = changes.filter((c) => used.has(`${c.critic}|${c.label}`)).reverse().slice(0, 100);
+  const revisions = changes
+    .filter((c) => c.from != null && c.to != null && used.has(`${c.critic}|${c.label}`))
+    .reverse()
+    .slice(0, 100);
   return { years, critics: config.critics, sourceUpdated: meta, regions, revisions };
 }
 

@@ -22,8 +22,9 @@ const MIN_SCORES = { WE: 1500, WA: 1500, WS: 250 };
 
 function diff(critic, before, after, date) {
   const out = [];
-  for (const label of new Set([...Object.keys(before), ...Object.keys(after)])) {
-    const a = before[label] ?? {};
+  // A series we were not collecting before is new data, not a change by the critic.
+  for (const label of Object.keys(before)) {
+    const a = before[label];
     const b = after[label] ?? {};
     for (const year of new Set([...Object.keys(a), ...Object.keys(b)])) {
       if (a[year] !== b[year]) {

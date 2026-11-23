@@ -58,7 +58,9 @@ npm test
 
 ## 자동 갱신과 배포
 
-- `.github/workflows/update.yml`이 매주 월요일에 수집과 빌드를 돌리고, 점수가 바뀌었으면 커밋한 뒤 사이트를 다시 배포합니다.
+- `.github/workflows/update.yml`이 반년에 한 번(3월 1일, 9월 1일) Wine Advocate와 Wine Spectator를 다시 수집하고, 점수가 바뀌었으면 커밋한 뒤 사이트를 다시 배포합니다. Actions 탭의 "Run workflow"로 아무 때나 직접 돌릴 수도 있습니다.
+- Wine Enthusiast는 GitHub 서버의 요청을 거부(HTTP 403)해서 자동 갱신에서 뺐습니다. 새 판이 나오면(보통 연 1회) `npm run collect -- we && npm run build`를 직접 돌려 커밋합니다.
+- GitHub는 공개 저장소에 60일 동안 활동이 없으면 예약 실행을 자동으로 꺼 둡니다. 꺼졌으면 Actions 탭에서 다시 켜거나 직접 실행합니다.
 - `.github/workflows/deploy.yml`이 `main`의 `web/` 폴더를 GitHub Pages에 올립니다. `web/`이 바뀌어 `main`에 푸시될 때마다 실행됩니다.
 - 처음 한 번, 저장소의 Settings → Pages → Build and deployment → Source를 **GitHub Actions**로 설정해야 합니다.
 - 예약 실행과 배포는 기본 브랜치에 병합된 뒤부터 동작합니다.

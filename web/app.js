@@ -67,13 +67,21 @@ function match(region, text) {
   const tokens = text.split(/\s+/).map(normalize).filter(Boolean);
   if (!tokens.length) return '';
   const terms = region.terms ?? (region.terms = searchTerms(region).map((t) => [t, normalize(t)]));
+  // Prefer the tightest match, so "마고" shows "마고" rather than "샤또 마고".
+  const find = (token) => terms.filter(([, n]) => n.includes(token)).sort((a, b) => a[1].length - b[1].length)[0];
+  const shown = (hit, token) => {
+    const obvious = [region.name, region.country, COUNTRY_KO[region.country]].includes(hit[0]);
+    return obvious || normalize(region.name).includes(token) ? '' : hit[0];
+  };
+  // The whole phrase first ("까베르네 소비뇽" as one term), then word by word.
+  const whole = normalize(text);
+  const phrase = find(whole);
+  if (phrase) return shown(phrase, whole);
   let via = '';
   for (const token of tokens) {
-    // Prefer the tightest match, so "마고" shows "마고" rather than "샤또 마고".
-    const hit = terms.filter(([, n]) => n.includes(token)).sort((a, b) => a[1].length - b[1].length)[0];
+    const hit = find(token);
     if (!hit) return null;
-    const obvious = [region.name, region.country, COUNTRY_KO[region.country]].includes(hit[0]);
-    if (!obvious && !normalize(region.name).includes(token) && !via) via = hit[0];
+    via ||= shown(hit, token);
   }
   return via;
 }

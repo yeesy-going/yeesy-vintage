@@ -36,6 +36,7 @@ export function buildChart(config, raw, meta = {}, changes = []) {
       id: region.id,
       country: region.country,
       name: region.name,
+      aliases: region.aliases ?? [],
       sources: region.sources,
       notes: region.notes ?? {},
       pooled: { mean: round(scored.pooled.mean), sd: round(scored.pooled.sd) },

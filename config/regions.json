@@ -36,7 +36,34 @@
         "WS": [
           "bordeaux-left-bank-reds-medoc-pessac-leognan"
         ]
-      }
+      },
+      "aliases": [
+        "Bordeaux",
+        "Médoc",
+        "Haut-Médoc",
+        "Pauillac",
+        "Margaux",
+        "Saint-Julien",
+        "Saint-Estèphe",
+        "Pessac-Léognan",
+        "Graves",
+        "Moulis",
+        "Listrac",
+        "Cabernet Sauvignon",
+        "보르도",
+        "좌안",
+        "메독",
+        "오메독",
+        "포이약",
+        "뽀이약",
+        "마고",
+        "생줄리앙",
+        "생테스테프",
+        "페삭레오냥",
+        "그라브",
+        "까베르네 소비뇽",
+        "카베르네 소비뇽"
+      ]
     },
     {
       "id": "bordeaux-right-bank",
@@ -53,7 +80,20 @@
         "WS": [
           "bordeaux-right-bank-reds-pomerol-st-emilion"
         ]
-      }
+      },
+      "aliases": [
+        "Bordeaux",
+        "Pomerol",
+        "Saint-Émilion",
+        "Merlot",
+        "Cabernet Franc",
+        "보르도",
+        "우안",
+        "포므롤",
+        "뽀므롤",
+        "생테밀리옹",
+        "메를로"
+      ]
     },
     {
       "id": "cote-de-nuits",
@@ -69,7 +109,31 @@
         "WS": [
           "burgundy-cotes-de-nuits-reds"
         ]
-      }
+      },
+      "aliases": [
+        "Burgundy",
+        "Bourgogne",
+        "Côte d'Or",
+        "Pinot Noir",
+        "Gevrey-Chambertin",
+        "Morey-Saint-Denis",
+        "Chambolle-Musigny",
+        "Vougeot",
+        "Vosne-Romanée",
+        "Nuits-Saint-Georges",
+        "Marsannay",
+        "Fixin",
+        "부르고뉴",
+        "버건디",
+        "꼬뜨 드 뉘",
+        "코트 드 뉘",
+        "피노 누아",
+        "쥬브레 샹베르탱",
+        "즈브레 샹베르탱",
+        "샹볼 뮈지니",
+        "본 로마네",
+        "뉘 생 조르주"
+      ]
     },
     {
       "id": "cote-de-beaune",
@@ -85,7 +149,27 @@
         "WS": [
           "burgundy-cotes-de-beaune-reds"
         ]
-      }
+      },
+      "aliases": [
+        "Burgundy",
+        "Bourgogne",
+        "Côte d'Or",
+        "Pinot Noir",
+        "Beaune",
+        "Pommard",
+        "Volnay",
+        "Corton",
+        "Aloxe-Corton",
+        "Savigny-lès-Beaune",
+        "부르고뉴",
+        "버건디",
+        "꼬뜨 드 본",
+        "코트 드 본",
+        "피노 누아",
+        "포마르",
+        "볼네",
+        "코르통"
+      ]
     },
     {
       "id": "northern-rhone",
@@ -101,7 +185,24 @@
         "WS": [
           "rhone-northern"
         ]
-      }
+      },
+      "aliases": [
+        "Rhône",
+        "Côte-Rôtie",
+        "Hermitage",
+        "Cornas",
+        "Saint-Joseph",
+        "Crozes-Hermitage",
+        "Syrah",
+        "론",
+        "북부 론",
+        "꼬뜨 로띠",
+        "코트 로티",
+        "에르미타주",
+        "코르나스",
+        "생 조셉",
+        "시라"
+      ]
     },
     {
       "id": "northern-rhone-whites",
@@ -112,8 +213,22 @@
           "France|Nothern Rhône|Whites"
         ]
       },
+      "aliases": [
+        "Rhône",
+        "Condrieu",
+        "Viognier",
+        "Hermitage Blanc",
+        "Château-Grillet",
+        "Marsanne",
+        "Roussanne",
+        "론",
+        "북부 론",
+        "꽁드리유",
+        "콩드리유",
+        "비오니에",
+        "화이트"
+      ],
       "notes": {
-        "WE": "Condrieu·Hermitage Blanc 등 북부 론 화이트 전체",
         "WA": "화이트 차트 없음",
         "WS": "레드·화이트 통합 차트만 있음"
       }
@@ -132,7 +247,21 @@
         "WS": [
           "rhone-southern"
         ]
-      }
+      },
+      "aliases": [
+        "Rhône",
+        "Châteauneuf-du-Pape",
+        "Gigondas",
+        "Vacqueyras",
+        "Côtes du Rhône",
+        "Grenache",
+        "론",
+        "남부 론",
+        "샤또뇌프 뒤 파프",
+        "샤토네프 뒤 파프",
+        "지공다스",
+        "그르나슈"
+      ]
     },
     {
       "id": "champagne",
@@ -148,7 +277,13 @@
         "WS": [
           "champagne"
         ]
-      }
+      },
+      "aliases": [
+        "Sparkling",
+        "샴페인",
+        "샹파뉴",
+        "스파클링"
+      ]
     },
     {
       "id": "sauternes",
@@ -164,7 +299,19 @@
         "WS": [
           "bordeaux-sauternes"
         ]
-      }
+      },
+      "aliases": [
+        "Bordeaux",
+        "Barsac",
+        "Sémillon",
+        "Sweet",
+        "보르도",
+        "소테른",
+        "쏘떼른",
+        "바르삭",
+        "스위트",
+        "화이트"
+      ]
     },
     {
       "id": "burgundy-whites",
@@ -182,7 +329,27 @@
         "WS": [
           "burgundy-white"
         ]
-      }
+      },
+      "aliases": [
+        "Bourgogne",
+        "Chardonnay",
+        "Chablis",
+        "Meursault",
+        "Puligny-Montrachet",
+        "Chassagne-Montrachet",
+        "Corton-Charlemagne",
+        "Mâconnais",
+        "Pouilly-Fuissé",
+        "부르고뉴",
+        "버건디",
+        "샤르도네",
+        "샤블리",
+        "뫼르소",
+        "퓔리니 몽라셰",
+        "샤사뉴 몽라셰",
+        "몽라셰",
+        "화이트"
+      ]
     },
     {
       "id": "alsace",
@@ -198,7 +365,16 @@
         "WS": [
           "alsace"
         ]
-      }
+      },
+      "aliases": [
+        "Riesling",
+        "Gewurztraminer",
+        "Pinot Gris",
+        "알자스",
+        "리슬링",
+        "게뷔르츠트라미너",
+        "화이트"
+      ]
     },
     {
       "id": "loire-whites",
@@ -215,6 +391,22 @@
           "loire"
         ]
       },
+      "aliases": [
+        "Sancerre",
+        "Pouilly-Fumé",
+        "Vouvray",
+        "Savennières",
+        "Muscadet",
+        "Chenin Blanc",
+        "Sauvignon Blanc",
+        "루아르",
+        "상세르",
+        "푸이 퓌메",
+        "부브레",
+        "슈냉 블랑",
+        "소비뇽 블랑",
+        "화이트"
+      ],
       "notes": {
         "WS": "Loire 전체 차트 기준"
       }
@@ -230,7 +422,16 @@
         "WA": [
           "France|Burgundy: Beaujolais"
         ]
-      }
+      },
+      "aliases": [
+        "Gamay",
+        "Morgon",
+        "Fleurie",
+        "Moulin-à-Vent",
+        "보졸레",
+        "가메",
+        "모르공"
+      ]
     },
     {
       "id": "languedoc-roussillon",
@@ -244,26 +445,41 @@
           "France|Languedoc",
           "France|Roussillon"
         ]
-      }
+      },
+      "aliases": [
+        "Languedoc",
+        "Roussillon",
+        "랑그독",
+        "루시용"
+      ]
     },
     {
-      "id": "barolo",
+      "id": "barolo-barbaresco",
       "country": "Italy",
-      "name": "Barolo",
+      "name": "Barolo · Barbaresco",
       "sources": {
         "WE": [
-          "Italy|Piedmont|Barolo"
+          "Italy|Piedmont|Barolo",
+          "Italy|Piedmont|Barbaresco"
         ],
         "WA": [
-          "Italy|Piedmont: Barolo"
+          "Italy|Piedmont: Barolo",
+          "Italy|Piedmont: Barbaresco"
         ],
         "WS": [
           "piedmont"
         ]
       },
-      "notes": {
-        "WS": "Piedmont 전체(Barolo·Barbaresco) 차트 기준"
-      }
+      "aliases": [
+        "Piedmont",
+        "Piemonte",
+        "Langhe",
+        "Nebbiolo",
+        "피에몬테",
+        "바롤로",
+        "바르바레스코",
+        "네비올로"
+      ]
     },
     {
       "id": "bolgheri",
@@ -280,6 +496,18 @@
           "tuscany-bolgheri-maremma"
         ]
       },
+      "aliases": [
+        "Tuscany",
+        "Toscana",
+        "Super Tuscan",
+        "Maremma",
+        "Sassicaia",
+        "Ornellaia",
+        "토스카나",
+        "볼게리",
+        "슈퍼 투스칸",
+        "사시카이아"
+      ],
       "notes": {
         "WS": "Bolgheri·Maremma 차트 기준"
       }
@@ -298,7 +526,17 @@
         "WS": [
           "tuscany-brunello-di-montalcino"
         ]
-      }
+      },
+      "aliases": [
+        "Tuscany",
+        "Toscana",
+        "Montalcino",
+        "Sangiovese",
+        "토스카나",
+        "브루넬로",
+        "몬탈치노",
+        "산지오베제"
+      ]
     },
     {
       "id": "chianti-classico",
@@ -315,6 +553,16 @@
           "tuscany-chianti-and-chianti-classico"
         ]
       },
+      "aliases": [
+        "Tuscany",
+        "Toscana",
+        "Chianti",
+        "Sangiovese",
+        "토스카나",
+        "끼안티",
+        "키안티",
+        "산지오베제"
+      ],
       "notes": {
         "WS": "Chianti·Chianti Classico 차트 기준"
       }
@@ -331,27 +579,16 @@
           "Italy|Veneto: Amarone della Valpolicella"
         ]
       },
+      "aliases": [
+        "Veneto",
+        "Valpolicella",
+        "Corvina",
+        "베네토",
+        "아마로네",
+        "발폴리첼라"
+      ],
       "notes": {
         "WS": "Wine Spectator는 Amarone 차트가 없음"
-      }
-    },
-    {
-      "id": "barbaresco",
-      "country": "Italy",
-      "name": "Barbaresco",
-      "sources": {
-        "WE": [
-          "Italy|Piedmont|Barbaresco"
-        ],
-        "WA": [
-          "Italy|Piedmont: Barbaresco"
-        ],
-        "WS": [
-          "piedmont"
-        ]
-      },
-      "notes": {
-        "WS": "Piedmont 전체(Barolo·Barbaresco) 차트 기준"
       }
     },
     {
@@ -365,7 +602,14 @@
         "WA": [
           "Italy|Friuli Venezia Giulia: Collio (white)"
         ]
-      }
+      },
+      "aliases": [
+        "Friuli",
+        "Collio",
+        "프리울리",
+        "콜리오",
+        "화이트"
+      ]
     },
     {
       "id": "alto-adige-whites",
@@ -378,7 +622,14 @@
         "WA": [
           "Italy|Trentino-Alto Adige (white)"
         ]
-      }
+      },
+      "aliases": [
+        "Trentino",
+        "Südtirol",
+        "알토 아디제",
+        "트렌티노",
+        "화이트"
+      ]
     },
     {
       "id": "rioja",
@@ -394,7 +645,12 @@
         "WS": [
           "rioja"
         ]
-      }
+      },
+      "aliases": [
+        "Tempranillo",
+        "리오하",
+        "템프라니요"
+      ]
     },
     {
       "id": "ribera-del-duero",
@@ -410,7 +666,13 @@
         "WS": [
           "ribera-del-duero"
         ]
-      }
+      },
+      "aliases": [
+        "Tempranillo",
+        "Castilla y León",
+        "리베라 델 두에로",
+        "템프라니요"
+      ]
     },
     {
       "id": "priorat",
@@ -427,6 +689,15 @@
           "priorat"
         ]
       },
+      "aliases": [
+        "Catalonia",
+        "Catalunya",
+        "Garnacha",
+        "Cariñena",
+        "프리오랏",
+        "프리오라트",
+        "카탈루냐"
+      ],
       "notes": {
         "WE": "Catalonia Reds 차트 기준"
       }
@@ -442,7 +713,16 @@
         "WA": [
           "Spain|Galicia"
         ]
-      }
+      },
+      "aliases": [
+        "Albariño",
+        "Rías Baixas",
+        "Godello",
+        "갈리시아",
+        "알바리뇨",
+        "리아스 바이사스",
+        "화이트"
+      ]
     },
     {
       "id": "vintage-port",
@@ -458,7 +738,14 @@
         "WS": [
           "vintage-port"
         ]
-      }
+      },
+      "aliases": [
+        "Port",
+        "Porto",
+        "Douro",
+        "포트",
+        "포르투"
+      ]
     },
     {
       "id": "douro-reds",
@@ -475,6 +762,12 @@
           "douro-valley-reds"
         ]
       },
+      "aliases": [
+        "Douro",
+        "Touriga Nacional",
+        "도우루",
+        "도루"
+      ],
       "notes": {
         "WE": "Portugal 레드 전체 차트 기준",
         "WA": "Portugal 드라이 와인 전체 차트 기준"
@@ -496,7 +789,19 @@
         "WS": [
           "germany"
         ]
-      }
+      },
+      "aliases": [
+        "Mosel",
+        "Rheingau",
+        "Nahe",
+        "Pfalz",
+        "Rheinhessen",
+        "독일",
+        "모젤",
+        "라인가우",
+        "리슬링",
+        "화이트"
+      ]
     },
     {
       "id": "austria-whites",
@@ -512,7 +817,18 @@
         "WS": [
           "austria"
         ]
-      }
+      },
+      "aliases": [
+        "Wachau",
+        "Kamptal",
+        "Kremstal",
+        "Grüner Veltliner",
+        "Riesling",
+        "오스트리아",
+        "바하우",
+        "그뤼너 벨트리너",
+        "화이트"
+      ]
     },
     {
       "id": "austria-reds",
@@ -525,7 +841,15 @@
         "WA": [
           "Austria|Niederösterreich / Wien / Burgenland (red)"
         ]
-      }
+      },
+      "aliases": [
+        "Burgenland",
+        "Blaufränkisch",
+        "Zweigelt",
+        "오스트리아",
+        "부르겐란트",
+        "블라우프랭키쉬"
+      ]
     },
     {
       "id": "napa-valley",
@@ -542,6 +866,20 @@
           "california-cabernet-napa"
         ]
       },
+      "aliases": [
+        "California",
+        "Cabernet Sauvignon",
+        "Oakville",
+        "Rutherford",
+        "Stags Leap",
+        "Howell Mountain",
+        "St. Helena",
+        "캘리포니아",
+        "나파",
+        "나파 밸리",
+        "까베르네 소비뇽",
+        "카베르네 소비뇽"
+      ],
       "notes": {
         "WA": "North Coast Cabernet Sauvignon 차트 기준"
       }
@@ -561,6 +899,16 @@
           "oregon"
         ]
       },
+      "aliases": [
+        "Oregon",
+        "Pinot Noir",
+        "Dundee Hills",
+        "오리건",
+        "오레곤",
+        "윌라멧",
+        "윌러밋",
+        "피노 누아"
+      ],
       "notes": {
         "WA": "Pinot Noir·Chardonnay 통합 차트 기준",
         "WS": "Oregon 차트 기준"
@@ -585,6 +933,18 @@
           "california-pinot-noir"
         ]
       },
+      "aliases": [
+        "Sonoma",
+        "Sonoma Coast",
+        "Russian River Valley",
+        "Carneros",
+        "Santa Barbara",
+        "Central Coast",
+        "캘리포니아",
+        "소노마",
+        "러시안 리버",
+        "피노 누아"
+      ],
       "notes": {
         "WA": "North Coast Pinot Noir 차트 기준"
       }
@@ -608,6 +968,16 @@
           "california-chardonnay"
         ]
       },
+      "aliases": [
+        "Napa",
+        "Sonoma",
+        "Carneros",
+        "Russian River Valley",
+        "Santa Barbara",
+        "캘리포니아",
+        "샤르도네",
+        "화이트"
+      ],
       "notes": {
         "WA": "North Coast Chardonnay 차트 기준"
       }
@@ -629,6 +999,14 @@
           "california-zinfandel"
         ]
       },
+      "aliases": [
+        "Sonoma",
+        "Dry Creek",
+        "Sierra Foothills",
+        "Napa",
+        "캘리포니아",
+        "진판델"
+      ],
       "notes": {
         "WA": "North Coast Zinfandel 차트 기준"
       }
@@ -647,6 +1025,13 @@
           "california-rhone-style-reds"
         ]
       },
+      "aliases": [
+        "Syrah",
+        "Grenache",
+        "Central Coast",
+        "캘리포니아",
+        "시라"
+      ],
       "notes": {
         "WE": "Syrah 차트 기준"
       }
@@ -662,7 +1047,13 @@
         "WA": [
           "USA|California - Central Coast: Paso Robles"
         ]
-      }
+      },
+      "aliases": [
+        "California",
+        "Central Coast",
+        "캘리포니아",
+        "파소 로블스"
+      ]
     },
     {
       "id": "santa-barbara",
@@ -676,7 +1067,18 @@
         "WA": [
           "USA|California - Central Coast: Santa Barbara"
         ]
-      }
+      },
+      "aliases": [
+        "California",
+        "Central Coast",
+        "Sta. Rita Hills",
+        "Santa Maria",
+        "Santa Ynez",
+        "Pinot Noir",
+        "Chardonnay",
+        "캘리포니아",
+        "산타 바바라"
+      ]
     },
     {
       "id": "washington",
@@ -693,7 +1095,17 @@
         "WS": [
           "washington"
         ]
-      }
+      },
+      "aliases": [
+        "Columbia Valley",
+        "Walla Walla",
+        "Cabernet Sauvignon",
+        "Merlot",
+        "Syrah",
+        "워싱턴",
+        "콜럼비아 밸리",
+        "왈라 왈라"
+      ]
     },
     {
       "id": "mendoza",
@@ -710,6 +1122,14 @@
           "argentina"
         ]
       },
+      "aliases": [
+        "Argentina",
+        "Malbec",
+        "Uco Valley",
+        "아르헨티나",
+        "멘도사",
+        "말벡"
+      ],
       "notes": {
         "WA": "Argentina 전체 차트 기준"
       }
@@ -729,7 +1149,17 @@
         "WS": [
           "chile"
         ]
-      }
+      },
+      "aliases": [
+        "Maipo",
+        "Colchagua",
+        "Cabernet Sauvignon",
+        "Carmenère",
+        "칠레",
+        "마이포",
+        "콜차과",
+        "까르미네르"
+      ]
     },
     {
       "id": "barossa-mclaren-vale",
@@ -745,7 +1175,17 @@
         "WS": [
           "barossa-and-mclaren-vale"
         ]
-      }
+      },
+      "aliases": [
+        "Australia",
+        "South Australia",
+        "Barossa Valley",
+        "Shiraz",
+        "호주",
+        "바로사",
+        "맥라렌 베일",
+        "쉬라즈"
+      ]
     },
     {
       "id": "western-australia",
@@ -758,7 +1198,15 @@
         "WA": [
           "Australia|Western Australia"
         ]
-      }
+      },
+      "aliases": [
+        "Australia",
+        "Margaret River",
+        "Cabernet Sauvignon",
+        "Chardonnay",
+        "호주",
+        "마가렛 리버"
+      ]
     },
     {
       "id": "new-zealand-pinot-noir",
@@ -776,22 +1224,16 @@
           "new-zealand"
         ]
       },
+      "aliases": [
+        "Central Otago",
+        "Martinborough",
+        "뉴질랜드",
+        "센트럴 오타고",
+        "마틴버러",
+        "피노 누아"
+      ],
       "notes": {
         "WA": "New Zealand 전체 차트 기준"
-      }
-    },
-    {
-      "id": "marlborough-sauvignon-blanc",
-      "country": "New Zealand",
-      "name": "Marlborough Sauvignon Blanc",
-      "sources": {
-        "WE": [
-          "New Zealand|Marlborough|Sauvignon Blanc"
-        ]
-      },
-      "notes": {
-        "WA": "품종 구분 없는 New Zealand 차트만 있음",
-        "WS": "New Zealand는 Pinot Noir 차트만 있음"
       }
     },
     {
@@ -809,6 +1251,14 @@
           "south-africa"
         ]
       },
+      "aliases": [
+        "Stellenbosch",
+        "Pinotage",
+        "Cabernet Sauvignon",
+        "남아공",
+        "남아프리카",
+        "스텔렌보스"
+      ],
       "notes": {
         "WA": "South Africa 전체 차트 기준",
         "WS": "South Africa 전체 차트 기준"

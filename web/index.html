@@ -12,10 +12,30 @@
 <body>
 <div class="page">
   <header class="masthead">
-    <h1>Yeesy's Vintage Chart</h1>
+    <div class="title-row">
+      <h1>Yeesy's Vintage Chart</h1>
+      <nav class="views" aria-label="보기 전환">
+        <a href="#simple" id="nav-simple">심플</a>
+        <a href="#detail" id="nav-detail">상세</a>
+      </nav>
+    </div>
     <p class="lede">세 평론지의 빈티지 차트를 같은 눈금으로 맞춘 뒤 평균한 산지별 빈티지 점수입니다.</p>
     <p class="sources" id="sources"></p>
   </header>
+
+  <div class="view" id="view-simple" hidden>
+    <div class="search">
+      <label class="visually-hidden" for="search">산지 검색</label>
+      <input type="search" id="search" placeholder="산지, 마을, 품종으로 검색 (예: medoc, 피노 누아)" autocomplete="off" spellcheck="false">
+      <span class="search-count" id="search-count" aria-live="polite"></span>
+    </div>
+    <div class="scroller">
+      <table class="sheet" id="sheet"></table>
+    </div>
+    <p class="hint">윗줄은 점수, 아랫줄은 그 산지 안에서의 순위입니다. 흐린 점수는 평론지 한 곳만 평가해 순위에서 뺀 해입니다.</p>
+  </div>
+
+  <div class="view" id="view-detail">
 
   <section class="controls" aria-label="표시 설정">
     <div class="segmented" role="group" aria-label="칸에 표시할 값">
@@ -49,6 +69,7 @@
       <li><strong>순위</strong> 그 산지를 다루는 평론지가 모두 평가한 해와 한 곳만 빠진 해를 순위에 넣습니다. 한 곳만 평가한 해는 점수만 보여주고 순위에서는 뺍니다.</li>
     </ol>
   </section>
+  </div>
 </div>
 <div class="tooltip" id="tooltip" role="tooltip" hidden></div>
 <script type="module" src="app.js"></script>

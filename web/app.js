@@ -3,7 +3,13 @@
 const BIN_EDGES = [86, 88, 90, 92, 94, 96]; // score -> one of 7 colour steps
 const STATUS_LABEL = { full: '전원 평가', partial: '1곳 빠짐', provisional: '잠정', none: '평가 없음' };
 
-const state = { mode: 'score', regionId: null, year: null };
+const COUNTRY_KO = {
+  France: '프랑스', Italy: '이탈리아', Spain: '스페인', Portugal: '포르투갈', Germany: '독일',
+  Austria: '오스트리아', US: '미국 USA America', Argentina: '아르헨티나', Chile: '칠레',
+  Australia: '호주', 'New Zealand': '뉴질랜드', 'South Africa': '남아공 남아프리카',
+};
+
+const state = { mode: 'score', regionId: null, year: null, query: '' };
 let chart;
 
 const $ = (id) => document.getElementById(id);
@@ -27,6 +33,96 @@ const yy = (year) => `'${String(year).slice(2)}`;
 // "France|Bordeaux|Médoc" -> "Bordeaux Médoc"; a Wine Spectator page slug -> its words.
 const sourceLabel = (label) =>
   label.includes('|') ? label.split('|').filter(Boolean).slice(1).join(' ') : label.replaceAll('-', ' ');
+
+// ---- Search -------------------------------------------------------------------------
+// "Médoc", "medoc" and "MEDOC" are the same word, and so are "Saint-Émilion",
+// "St. Emilion" and "st emilion".
+function normalize(text) {
+  return String(text)
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .normalize('NFC') // put Hangul syllables back together
+    .toLowerCase()
+    .replace(/\bsainte?\b/g, 'st')
+    .replace(/[^a-z0-9\u3131-\u318e\uac00-\ud7a3]+/g, '');
+}
+
+/** Everything a region can be found by: its name, country, aliases, and the critics' own labels. */
+function searchTerms(region) {
+  const fromSources = Object.values(region.sources).flat().flatMap((label) =>
+    label.includes('|') ? label.split(/[|:/]/) : [label.replaceAll('-', ' ')],
+  );
+  return [region.name, region.country, COUNTRY_KO[region.country] ?? '', ...region.aliases, ...fromSources]
+    .map((t) => t.trim())
+    .filter(Boolean);
+}
+
+/** null when the region does not match; otherwise the alias that matched (or '' if the name did). */
+function match(region, query) {
+  const tokens = query.split(/\s+/).map(normalize).filter(Boolean);
+  if (!tokens.length) return '';
+  const terms = region.terms ?? (region.terms = searchTerms(region).map((t) => [t, normalize(t)]));
+  let via = '';
+  for (const token of tokens) {
+    const hit = terms.find(([, n]) => n.includes(token));
+    if (!hit) return null;
+    const obvious = [region.name, region.country, COUNTRY_KO[region.country]].includes(hit[0]);
+    if (!obvious && !normalize(region.name).includes(token) && !via) via = hit[0];
+  }
+  return via;
+}
+
+// ---- Simple view: the original Summary sheet ------------------------------------------
+function renderSheet() {
+  const table = $('sheet');
+  const head = el(
+    'tr',
+    {},
+    el('th', { class: 'col-country', scope: 'col' }),
+    el('th', { class: 'col-region sheet-title', scope: 'col', text: "Yeesy's Vintage Chart" }),
+    ...chart.years.map((year) => el('th', { scope: 'col', text: String(year) })),
+  );
+  const hits = chart.regions.map((region) => [region, match(region, state.query)]).filter(([, via]) => via !== null);
+  $('search-count').textContent = state.query.trim() ? `${chart.regions.length}개 산지 중 ${hits.length}개` : '';
+
+  const body = el('tbody');
+  hits.forEach(([region, via], i) => {
+    const firstOfCountry = i === 0 || hits[i - 1][0].country !== region.country;
+    const scores = el('tr', { class: `scores${firstOfCountry ? ' first' : ''}` });
+    if (firstOfCountry) {
+      const span = hits.filter(([r]) => r.country === region.country).length;
+      scores.append(el('th', { class: 'col-country', scope: 'rowgroup', rowspan: span * 2, text: region.country }));
+    }
+    scores.append(
+      el('th', { class: 'col-region', scope: 'row' }, region.name, via ? ' ' : null, via ? el('mark', { text: via }) : null),
+    );
+    const ranks = el('tr', { class: 'ranks' }, el('th', { class: 'col-region', text: region.top.map((y) => String(y).slice(2)).join(', ') }));
+    for (const year of chart.years) {
+      const y = region.years[year];
+      const title = y.status === 'provisional' ? `평론지 ${y.of}곳 중 ${y.n}곳만 평가 (잠정)` : null;
+      scores.append(el('td', { class: y.status, title, text: y.status === 'none' ? '' : fmt(y.score) }));
+      ranks.append(el('td', { class: y.status, text: y.rank == null ? '' : String(y.rank) }));
+    }
+    body.append(scores, ranks);
+  });
+  if (!hits.length) {
+    body.append(
+      el('tr', {}, el('td', { class: 'empty', colspan: chart.years.length + 2, text: `"${state.query.trim()}"에 맞는 산지가 없습니다. 산지 이름, 마을 이름, 품종, 나라 이름으로 찾아보세요.` })),
+    );
+  }
+  table.replaceChildren(el('thead', {}, head), body);
+}
+
+function showView() {
+  const simple = location.hash === '#simple';
+  $('view-simple').hidden = !simple;
+  $('view-detail').hidden = simple;
+  for (const [id, current] of [['nav-simple', simple], ['nav-detail', !simple]]) {
+    if (current) $(id).setAttribute('aria-current', 'page');
+    else $(id).removeAttribute('aria-current');
+  }
+  hideTip();
+}
 
 function cellText(y) {
   if (y.status === 'none') return '·';
@@ -296,11 +392,18 @@ async function start() {
   $('mode-rank').addEventListener('click', () => setMode('rank'));
   $('scroller').addEventListener('scroll', hideTip, { passive: true });
   window.addEventListener('scroll', hideTip, { passive: true });
+  $('search').addEventListener('input', (e) => {
+    state.query = e.target.value;
+    renderSheet();
+  });
+  window.addEventListener('hashchange', showView);
   renderSources();
   renderLegend();
   renderChart();
   renderDetail();
   renderRevisions();
+  renderSheet();
+  showView();
 }
 
 start().catch((err) => {

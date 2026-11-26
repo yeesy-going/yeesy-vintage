@@ -107,7 +107,7 @@ function render() {
     const scores = el('tr', { class: `scores${firstOfCountry ? ' first' : ''}` });
     if (firstOfCountry) {
       const span = hits.filter(([r]) => r.country === region.country).length;
-      scores.append(el('th', { class: 'col-country', scope: 'rowgroup', rowspan: span * 2, text: region.country }));
+      scores.append(el('th', { class: 'col-country', scope: 'rowgroup', rowspan: span * 2 }, el('span', { text: region.country })));
     }
     scores.append(
       el('th', { class: 'col-region', scope: 'row' }, region.name, via ? ' ' : null, via ? el('mark', { text: via }) : null),

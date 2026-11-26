@@ -42,6 +42,7 @@
 
 * { box-sizing: border-box; }
 [hidden] { display: none !important; }
+html, body { height: 100%; }
 body {
   margin: 0;
   background: var(--bg);
@@ -51,13 +52,18 @@ body {
 .page {
   max-width: 1360px;
   margin: 0 auto;
-  padding-block: 28px 56px;
+  /* The page is exactly one screen tall, so the sheet scrolls inside it and its
+     header row stays in view, like frozen panes in a spreadsheet. */
+  height: 100%;
+  min-height: 420px; /* on a very short screen, scroll the page rather than squash the sheet */
+  padding-block: 28px 16px;
   padding-left: max(16px, env(safe-area-inset-left, 0px));
   padding-right: max(16px, env(safe-area-inset-right, 0px));
   display: flex;
   flex-direction: column;
   gap: 14px;
 }
+.page > * { flex: none; }
 h1 { margin: 0 0 6px; font-size: 26px; font-weight: 600; letter-spacing: -0.01em; text-wrap: balance; }
 .visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
 
@@ -76,13 +82,17 @@ h1 { margin: 0 0 6px; font-size: 26px; font-weight: 600; letter-spacing: -0.01em
 .search input:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
 .search-count { font-size: 13px; color: var(--ink-3); }
 
-.scroller { overflow-x: auto; border: 1px solid var(--line); border-radius: 10px; background: var(--surface); }
+.page > .scroller { flex: 0 1 auto; min-height: 0; }
+.scroller { overflow: auto; border: 1px solid var(--line); border-radius: 10px; background: var(--surface); }
 .hint { margin: 0; color: var(--ink-3); font-size: 12.5px; }
 
 table { border-collapse: separate; border-spacing: 0; }
 .sheet { font-family: var(--font-data); font-variant-numeric: tabular-nums; font-size: 12.5px; }
 .sheet th, .sheet td { padding: 0 6px; text-align: center; white-space: nowrap; }
 .sheet thead th {
+  position: sticky;
+  top: 0;
+  z-index: 3;
   height: 32px;
   font-weight: 600;
   color: var(--ink-2);
@@ -93,8 +103,9 @@ table { border-collapse: separate; border-spacing: 0; }
 .sheet .col-country, .sheet .col-region { position: sticky; z-index: 2; background: var(--surface); text-align: left; }
 .sheet .col-country {
   left: 0;
-  width: 92px;
-  min-width: 92px;
+  width: 100px;
+  min-width: 100px;
+  max-width: 100px;
   padding-left: 14px;
   vertical-align: top;
   padding-top: 9px;
@@ -103,13 +114,16 @@ table { border-collapse: separate; border-spacing: 0; }
   border-top: 1px solid var(--line-strong);
 }
 .sheet .col-region {
-  left: 92px;
+  left: 100px; /* the country column's width */
   width: 200px;
   min-width: 200px;
   border-right: 1px solid var(--line);
   font-family: var(--font);
 }
+/* Keep the country name in view while scrolling through a long group. */
+.sheet .col-country span { display: block; position: sticky; top: 42px; }
 .sheet thead .col-country { border-top: 0; padding-top: 0; }
+.sheet thead .col-country, .sheet thead .col-region { z-index: 4; } /* the frozen corner */
 .sheet tr.scores td, .sheet tr.scores th.col-region { border-top: 1px solid var(--line); padding-top: 7px; }
 .sheet tr.scores.first td, .sheet tr.scores.first th.col-region { border-top-color: var(--line-strong); }
 .sheet tr.scores td { height: 26px; color: var(--ink); min-width: 39px; }
